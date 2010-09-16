@@ -15,5 +15,3 @@ than never.
 As for the blog itself, I'm using the Jekyll static site generator and
 github pages to host the blog. I'm still learning what can be done with
 Jekyll so I'll be sure to keep you posted on any advancements I make.
-
-Task One: Get Jekyll to use haml.

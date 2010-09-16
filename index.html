@@ -4,6 +4,18 @@ layout: default
 
 <div id="content">
   {% for post in site.posts limit:5 %}
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <h1>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h1>
+    <div class='date'>
+      {{ post.date | date: "%m.%d.%Y" }}
+      <span class='arrow'>&#x2192</span>
+    </div>
+    <div class='post'>
+      <p class='post_preview'>
+        {{ post.content | strip_html | truncatewords:60 }}
+      </p>
+      <a href='{{ post.url }}' class='read_more'>read more</a>
+    </div>
   {% endfor %}
 </div>

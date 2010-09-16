@@ -1,10 +1,11 @@
 destination: ./_site
 auto:        true
+server:      true
 lsi:         false
 server_port: 4000
-pygments:    false
+pygments:    true
 markdown:    maruku
-permalink:   date
+permalink:   pretty
 paginate:    4
 maruku:
   use_tex:    false

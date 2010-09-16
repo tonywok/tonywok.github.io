@@ -1,9 +1,58 @@
 body {
   color: #333;
+  margin: 0 auto;
+  width: 600px;
+}
+
+#header {
+  padding: 25px 0;
+  height: 180px;
+}
+
+#header img#logo {
+  float: right;
 }
 
 #main_content {
-  margin: 0 auto;
-  width: 600px;
+}
+
+
+a {
+  color: #e30;
+  text-decoration: none;
+}
+
+a.read_more {
+  display: inline;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h1 a {
+  color: #333;
+}
+
+h1 a:hover {
+  color: #e30;
+}
+
+p.post_preview {
+  display: inline;
+}
+
+div.date {
+  font-size: 13px;
+}
+
+span.arrow {
+  color: #e30;
+}
+
+/* utilies */
+
+.clear {
+  clear: both;
 }
 
