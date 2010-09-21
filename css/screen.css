@@ -30,11 +30,11 @@ h1 {
   font-size: 24px;
 }
 
-h1 a {
+h1 a.title {
   color: #333;
 }
 
-h1 a:hover {
+h1 a.title:hover {
   color: #e30;
 }
 
@@ -44,6 +44,12 @@ p.post_preview {
 
 div.date {
   font-size: 13px;
+  margin: -20px 0 0 -90px;
+  float: left;
+}
+
+div.post {
+  padding: 20px 0 0 0;
 }
 
 span.arrow {
