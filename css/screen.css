@@ -38,8 +38,8 @@ h1 a.title:hover {
   color: #e30;
 }
 
-p.post_preview {
-  display: inline;
+div.post_preview {
+  padding: 15px 0;
 }
 
 div.date {
@@ -49,7 +49,28 @@ div.date {
 }
 
 div.post {
-  padding: 20px 0 0 0;
+  padding: 10px 0 25px 0;
+}
+
+div.post p {
+  padding: 10px 0;
+  line-height: 22px;
+}
+
+div.post p em {
+  color: #b22222;
+}
+
+div.post blockquote {
+  border-left: 20px solid #b22222;
+  margin: 10px 0;
+  padding: 10px 50px;
+  font-style: italic;
+  background-color: #f7f7f7;
+}
+
+div.post blockquote span.explanation {
+  font-style: none;
 }
 
 span.arrow {

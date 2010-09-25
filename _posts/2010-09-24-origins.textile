@@ -1,0 +1,61 @@
+---
+layout: post
+author: Tony
+title : Origins
+date  : 09/25/2010
+---
+
+p. Sure, I had been a telemarketer, a strawberry picker, a caterer and an employee of Dairy Queen. But, on January 1st of 2009, I got my first "real" job.
+
+p. I was hired by StudioCT, a web design and development shop run through The Ohio State University Honors and Scholars program StudioCT is managed by David McIntyre and Ray Arebalo. Thanks to them, I gained my first real web programming experience. Up until that point my only familiarity with web programming had come from taking a few of the classes offered by the Media, Marketing and Communications Scholars Program. I played around with .Net 2.0 using C# under the much appreciated guidance of Jimmy Lauzau, scattering in some php with Anish Minstry. However, my results were only of moderate success, which was discouraging. Working at studioCT quickly changed this, as I was put on real projects and assigned to work with students who had quite a bit more experience than I had at that time. I also worked alongside a few designers, by the names of Paul Benson and Matt Pasternack, who have greatly influenced me with their work, and continue to do so.
+
+p. Fast forward to about March of 2009, I had received an email about a new project group the MMC scholars were beginning to offer; The Ruby group. It was taught by Joe O'Brien, who I hadn't heard of at the time. I quickly signed up for the group. It was a big deal to me because the group was only being offered to a group of eight students. Needless to say, I felt exclusive, and as a result, went to meetings eager to learn. Joe had a radically different teaching approach than I had ever experienced, and I quite liked it. Once I got past environment set up, I began to dig into Edgecase's Ruby Koans. Theory has its place, but jumping right into writing Ruby code was awesome. After the koans, we started learning about git (and github) for versioning control. This was radically different than CVS, the only thing I had used up to that point.
+
+p. I did some digging and found this old email to Joe, documenting my progress and exposing my inexperience (something I've luckily never struggled with):
+
+bq.. Hey Joe,
+
+I'm following the tutorial on part two of the Rails from Scratch series. I am getting an undefined method error for "acts_as_list". I read that this may be due to using a newer version of rails. Anyway, I read up on it a little bit and went to go install the plugin from 'git'. I see it in my vendor/plugins directory, but it doesn't seem to be working. Also, same sort of deal when trying to install 'acts_as_versioned' from git (as it is later used in the tutorial). Well, with all this reading I feel like I am beginning to pick some things up, and I'm pretty sure I'll have some questions for Tuesday.
+
+Tony
+
+p. Looking back, I probably just needed to restart the server, or something equally noobish. But, thankfully, Joe was patient enough to answer all of my questions, and somehow managed to make me feel comfortable asking them. Cogs were beginning to turn.
+
+p. Eventually the quarter came to an end and Joe passed off Ruby Group duties to Matt Yoho. He quickly picked up where Joe left off, pushing test driven development and showing us some more advanced features of Rails. Although I don't remember making much progress on the application we had set out to build, it motivated me to spend more time outside of class learning about Ruby. All this really meant was that I would bombard Matt with every question that popped into my head, which he was more than willing to answer.
+
+p. As the quarter once again came to a close, I remember asking Matt if he was interested in hiring an intern at Toobla, the Columbus start up he was working for at the time. Thankfully, they were looking for some chump to fill the spot.
+
+p. I was able to find the email where I was first offered the job... I know now that I definitely made the right decision.
+
+bq.. Hey Matt,
+
+This is great, definitely acceptable [The Job Offer]. Although I have yet to hear back from ODOT [Other Job I was considering at the time], I think this opportunity is vastly more in the direction I would like to go. As far as borrowing your book [Agile Development with Rails], I'll be done with finals on Tuesday evening, so anytime after that would work out great for me. I have a week of pretty much nothing, aside from settling in my new place. So, this reading should work out nicely. Oh and as far as that tweet [In reference to British Sea Power], we should talk music sometime, heh.
+
+Thanks,
+Tony
+
+p. A few weeks later, I met with Matt and Brian Link, and was quickly issued a MacBook and a copy of Agile Development with Rails (still have both, oops!). Thus began my first real world Ruby/Rails adventure.
+
+p. In addition to taking classes part-time, I was making it into the office from about 11am to 5pm. I spent the majority of the time pairing with Matt and Mike Busch, who was hired on shortly after I was. I remember going to work with the strategy that if I were to soak up about 1% of the skills that Matt and Mike showed daily, then in roughly 50 years, I could be half as good as one of them. Although Toobla didn't stand the test of time, the relationships built while working there lasted and I continued to bother Mike and Matt with all of my questions, regardless of the time of day.
+
+p. So, jobless, I continued practicing my Ruby skills to varied success. The Ruby group had transitioned into being known as "osurb", and although we met less often, it was still a good place to bring questions and hack on code. A few guys including Jeff Lembeck and Jimmy Trowbridge started up a competitor to "Sloopy Menus", a campus food ordering/menu service, for their OSU CSE capstone project. This provided the group with lots of discussion and late nights of working on real problems.
+
+p. Some time passed and I was offered a ticket to attend CodeMash, a killer Web Dev conference held annually in Sandusky, with some EdgeCase folk (Big thanks to Ryan Briones for giving me his ticket). At the conference I was introduced to Adam Winter, Chief Joe at the Columbus mobile survey startup, JoeMetric. At JoeMetric I worked alongside Kevin Farst. Kevin and I muscled through the codebase, primarily working on integration testing and bug squashing for the existing web app. Working with Adam, Stephanie, and Kevin was a very valuable experience. However, a team of two developers with only little experience in a complex rails application produced a very "sink or swim" type scenario. Although gasping for air at times, we made steady progress and celebrated little wins when we could. Unfortunately, it came time to make a hard decision, and I elected to move on, in search of a more apprentice-like role.
+
+p. I submitted an application to Coexist Creative, a microagency located in the Columbus' Short North, and was offered an intern position almost immediately. I'd like to thank Dan and Christian for giving me the opportunity to work with such awesome designers and developers. Although Coexist does most of their work in php, a language that I still only have basic familiarity with, I was very excited to work with such talent (not to mention the slick location!). While there, I did mostly front end work sprinkled in with some Wordpress customization. I really enjoyed helping make the awesome work from the design team come to life. I worked primarily under the supervision of Brad Condo, who I'm still convinced knows everything there is to know about the web.
+
+p. At the end of the quarter with Coexist, I was presented with yet another tough decision. I heard word from Joe O'Brien saying that EdgeCase was looking for someone to take part in their Apprenticeship Program. Having met most of the guys at EdgeCase, and taking into consideration all that they do for the Ruby community, I couldn't pass up the opportunity. Not to mention, I could get back to hacking on Ruby code.
+
+p. I came across an email discussing when I'd be available to work over the summer:
+
+bq.. Currently, I have only one class scheduled (tue/thurs/fri @9:30-10:18). I may end up dropping it. I really only scheduled it to hold my place in line in case I want to take it. I'll probably just take one class, at most two. But either way, I plan on having a light enough load that full time shouldn't be a problem.
+
+Tony
+
+p. I dropped both classes. Good call.
+
+p. Since then, I've been working on both client projects and the EdgeCase Apprenticeship program with Matt Yoho as its coordinator. Osurb is still going strong. In fact, I think everyone has gotten some type of job offer as either a direct or indirect result of joining the group. It's really surprising how many things have come full circle. I couldn't have asked for a better experience. I've learned so much in the past year and a half, and I've only just begun.
+
+p. _Thanks to everyone who has ever answered a question, pointed me in the right direction or offered even the tiniest bit of advice. I couldn't be where I am today without you._
+
+

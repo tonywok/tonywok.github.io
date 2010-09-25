@@ -12,20 +12,11 @@
   </head>
   <body>
     <div id="header">
-      <img src='/images/padawan.jpg' id='logo' />
+      <a href='/'><img src='/images/padawan.jpg' id='logo' /></a>
     </div>
     <div class='clear'></div>
     <div id="main_content" class='clear'>
-      <h1>
-        {{ post.title }}
-      </h1>
-      <div class='date'>
-        {{ post.date | date: "%m.%d.%Y" }}
-        <span class='arrow'>&#x2192</span>
-      </div>
-      <div class='post'>
-        {{ content }}
-      </div>
+      {{ content }}
     </div>
   </body>
 </html>
