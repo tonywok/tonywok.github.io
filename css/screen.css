@@ -58,11 +58,11 @@ div.post p {
 }
 
 div.post p em {
-  color: #b22222;
+  color: #C80000;
 }
 
 div.post blockquote {
-  border-left: 20px solid #b22222;
+  border-left: 20px solid #C80000;
   margin: 10px 0;
   padding: 10px 50px;
   font-style: italic;
@@ -74,7 +74,7 @@ div.post blockquote span.explanation {
 }
 
 span.arrow {
-  color: #e30;
+  color: #C80000;
 }
 
 /* utilies */
