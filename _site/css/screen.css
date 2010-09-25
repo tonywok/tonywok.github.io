@@ -18,7 +18,7 @@ body {
 
 
 a {
-  color: #e30;
+  color: #C80000;
   text-decoration: none;
 }
 
@@ -35,7 +35,7 @@ h1 a.title {
 }
 
 h1 a.title:hover {
-  color: #e30;
+  color: #C80000;
 }
 
 div.post_preview {
