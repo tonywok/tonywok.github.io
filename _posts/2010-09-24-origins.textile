@@ -5,7 +5,7 @@ title : Origins
 date  : 09/25/2010
 ---
 
-p. Sure, I had been a telemarketer, a strawberry picker, a caterer and an employee of Dairy Queen. But, on January 1st of 2009, I got my first "real" job.
+p. Sure, I had been a telemarketer, a strawberry picker, a caterer and an employee of Dairy Queen. But on January 1st of 2009 I got my first "real" job.
 
 p. I was hired by StudioCT, a web design and development shop run through The Ohio State University Honors and Scholars program StudioCT is managed by David McIntyre and Ray Arebalo. Thanks to them, I gained my first real web programming experience. Up until that point my only familiarity with web programming had come from taking a few of the classes offered by the Media, Marketing and Communications Scholars Program. I played around with .Net 2.0 using C# under the much appreciated guidance of Jimmy Lauzau, scattering in some php with Anish Minstry. However, my results were only of moderate success, which was discouraging. Working at studioCT quickly changed this, as I was put on real projects and assigned to work with students who had quite a bit more experience than I had at that time. I also worked alongside a few designers, by the names of Paul Benson and Matt Pasternack, who have greatly influenced me with their work, and continue to do so.
 
