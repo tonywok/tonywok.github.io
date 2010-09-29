@@ -11,8 +11,8 @@ layout: default
       {{ post.date | date: "%m.%d.%Y" }}
       <span class='arrow'>&#x2192</span>
     </div>
-    <div class='post_preview'>
-      {{ post.content | strip_html | truncatewords:60 }}
+    <div class='post'>
+      {{ post.content | truncatewords:140 }}
       <a href='{{ post.url }}' class='read_more'>read more</a>
     </div>
   {% endfor %}
