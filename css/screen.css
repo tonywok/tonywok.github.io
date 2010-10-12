@@ -38,7 +38,7 @@ h1 a.title:hover {
   color: #C80000;
 }
 
-h3 {
+div.post h3 {
   font-size: 20px;
   padding: 20px 0 20px 0;
   text-decoration: underline;
@@ -46,7 +46,7 @@ h3 {
   color: #999999;
 }
 
-h4 {
+div.post h4 {
   color: #333;
 }
 
