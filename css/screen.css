@@ -13,9 +13,7 @@ body {
   float: right;
 }
 
-#main_content {
-}
-
+/* Links */
 
 a {
   color: #C80000;
@@ -25,6 +23,8 @@ a {
 a.read_more {
   display: inline;
 }
+
+/* headers */
 
 h1 {
   font-size: 24px;
@@ -37,6 +37,20 @@ h1 a.title {
 h1 a.title:hover {
   color: #C80000;
 }
+
+h3 {
+  font-size: 20px;
+  padding: 20px 0 20px 0;
+  text-decoration: underline;
+  font-family: Arial;
+  color: #999999;
+}
+
+h4 {
+  color: #333;
+}
+
+/* posts */
 
 div.post_preview {
   padding: 15px 0;
@@ -75,6 +89,13 @@ div.post blockquote span.explanation {
 
 span.arrow {
   color: #C80000;
+}
+
+pre {
+  background: #333;
+  color: #e5e5e5;
+  padding: 10px;
+  border-left: 20px solid #C80000;
 }
 
 /* utilies */
