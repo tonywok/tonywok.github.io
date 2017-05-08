@@ -2,7 +2,7 @@
 layout: post
 author: Tony
 title : Origins
-date  : 09/25/2010
+date  : 2010-09-25
 ---
 
 p. Sure, I had been a telemarketer, a strawberry picker, a caterer and an employee of Dairy Queen. But on January 1st of 2009 I got my first "real" job.
