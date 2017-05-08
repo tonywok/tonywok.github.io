@@ -2,7 +2,7 @@
 layout: post
 author: Tony
 title : Dick and Jane Project on All Sides w/ Ann Fisher
-date  : 2012-12-0j
+date  : 2012-12-04
 ---
 
 Today I was lucky enough to sit in w/ Ben Shinabery of the Dick and Jane Project on WOSU’s All Sides w/ Ann Fisher for Tech Tuesday!
@@ -11,4 +11,4 @@ This past January Neo gave The Dick and Jane Project a $100,000 grant for the de
 
 You can stream the episode here: [Tech Tuesday 12/4/2012](http://wosu.org/2012/allsides/tech-tuesday-local-online-songwriting-light-exposure-gift-ideas/)
 
-Dick and Jane Project: http://www.thedickandjaneproject.org/
+Dick and Jane Project: [http://www.thedickandjaneproject.org/](http://www.thedickandjaneproject.org/)

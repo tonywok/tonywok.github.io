@@ -35,7 +35,7 @@ Now for some setup! Woo! Excitement!
 
 ### Setup
 
-```
+{% highlight ruby %}
 mkdir -p forcefield/lib/forcefield forcefield/spec/lib/forcefield
 cd forcefield
 
@@ -46,22 +46,22 @@ touch lib/forcefield/request.rb
 touch forcefield.gemspec
 
 bundle init (install bundle if you haven't already)
-```
+{% endhighlight %}
 
 Edit your Gemfile as follows:
 
-```ruby
+{% highlight ruby %}
 source "http://rubygems.org"
 gemspec
-```
+{% endhighlight %}
 
 Edit your gemspec to include the following dependencies:
 
-```ruby
+{% highlight ruby %}
 gem.add_dependency 'rack', '~> 1.4'
 gem.add_dependency 'simple_oauth'
 gem.add_development_dependency 'rspec', '~> 2.7'
-```
+{% endhighlight %}
 
 "bundle" it up and we're ready to start rockin'. (Please see source for Rakefile and spec_helper boilerplate)
 
@@ -75,7 +75,7 @@ Little do they know, we've already emailed a set of Imperial credentials to the 
 
 So, let's start by failing some tests (spec/lib/forcefield/middleware_spec.rb):
 
-```ruby
+{% highlight ruby %}
 require 'spec_helper'
 
 describe Forcefield::Middleware do
@@ -93,7 +93,7 @@ describe Forcefield::Middleware do
     end
   end
 end
-```
+{% endhighlight %}
 
 If you're unfamiliar with Rack, you may find the <code>let(:death_star)</code> line a little peculiar. Well, it's actually creating a mock Rack Application. This is because calling a Rack application results merely in an array containing a status code, HTTP response headers, and an array of strings that serve as the response body.
 
@@ -108,7 +108,7 @@ As stated above, we need to make sure we do the following:
 1. Defines <code>initialize</code>, taking a Rack application as an argument (see <code>death_star</code> in test)
 1. Responds to call, passing in the request environment.
 
-```ruby
+{% highlight ruby %}
 # lib/forcefield/middleware.rb
 module Forcefield
   class Middleare
@@ -125,11 +125,11 @@ module Forcefield
     end
   end
 end
-```
+{% endhighlight %}
 
 That should be sufficient to make our tests pass, however, simply having an Authorization header isn't good enough. It has to be a valid OAuth header. When implementing a protocol, as you often are when working with Rack Middleware, it's nice to write specs against the RFC documentation. Here is an OAuth header adapted for our needs.
 
-```
+{% highlight ruby %}
 GET /plans?type=secret&amp;tags=killswitch HTTP/1.1
   Host: api.deathstar.com
   Authorization: OAuth realm="Endor",
@@ -139,15 +139,15 @@ GET /plans?type=secret&amp;tags=killswitch HTTP/1.1
     oauth_timestamp="137131201",
     oauth_nonce="7d8f3e4a",
     oauth_signature="bYT5CMsGcbgUdFHObYMEfcx6bsw%3D"
-```
+{% endhighlight %}
 
 Let's spec it out!
 
-```ruby
+{% highlight ruby %}
 # ... previous specs above ...
 context "when incoming request has a Authorization header" do
   context "but is missing an OAuth Authorization scheme" do
-    let(:header_with_bad_scheme) {{ "HTTP_AUTHORIZATION" => "Force" }}
+    let(:header_with_bad_scheme) { { "HTTP_AUTHORIZATION" => "Force" } }
     let(:resp) { mock_request.get("/", header_with_bad_scheme) }
 
     it("returns a 401") { resp.status.should == 401 }
@@ -158,7 +158,7 @@ context "when incoming request has a Authorization header" do
   end
 
   context "but is missing an oauth_consumer_key" do
-    let(:header_with_no_key) {{ "HTTP_AUTHORIZATION" => "OAuth realm=\"Endor\"" }}
+    let(:header_with_no_key) { { "HTTP_AUTHORIZATION" => "OAuth realm=\"Endor\"" } }
     let(:resp) { mock_request.get("/", header_with_no_key) }
 
     it("returns a 401") { resp.status.should == 401 }
@@ -169,7 +169,7 @@ context "when incoming request has a Authorization header" do
   end
 
   context "but is missing an oauth_signature" do
-    let(:header_without_sig) {{ "HTTP_AUTHORIZATION" => "OAuth realm=\"foo\", oauth_consumer_key=\"123\"" }}
+    let(:header_without_sig) { { "HTTP_AUTHORIZATION" => "OAuth realm=\"foo\", oauth_consumer_key=\"123\"" } }
     let(:resp) { mock_request.get("/", header_without_sig) }
 
     it("returns a 401") { resp.status.should == 401 }
@@ -192,11 +192,11 @@ context "when incoming request has a Authorization header" do
     end
   end
 end
-```
+{% endhighlight %}
 
 We're going to need to mock out the ImperialClient model. I like to create mock classes for things like this in "spec/support".
 
-```
+{% highlight ruby %}
 # spec/support/imperial_client.rb
 class ImperialClient &lt; Struct.new(:consumer_key, :consumer_secret)
   DUMMY_KEY    = 'key'
@@ -208,7 +208,7 @@ class ImperialClient &lt; Struct.new(:consumer_key, :consumer_secret)
     end
   end
 end
-```
+{% endhighlight %}
 
 ### Simple OAuth - It's simple!
 
@@ -216,12 +216,12 @@ In order to get these tests to pass, we need to seriously parse the Authorizatio
 
 Also, this seems like an excellent place to start thinking about encapsulation and separation of concerns. We should probably have an object that handles verifying the request. Luckily, we need not look any further than Rack itself. We'll just subclass <code>Rack::Auth::AbstractRequest</code>, as it already provides a handful of useful helper methods. As I learned, be sure to give the Rack docs a once over before you end up reinventing the wheel. The Rack library provides a lot of potentially reusable, battle-tested code.
 
-```ruby
+{% highlight ruby %}
 # lib/forcefield/request
 require 'rack/auth/abstract/request'
 
 module Forcefield
-  class Request &lt; Rack::Auth::AbstractRequest
+  class Request < Rack::Auth::AbstractRequest
 
     # This method encapsulates the various checks we need to make against the requests
     # Authorization header before we deem it ready for verification.
@@ -279,7 +279,7 @@ module Forcefield
     end
   end
 end
-```
+{% endhighlight %}
 
 ### Say What?
 
@@ -291,7 +291,7 @@ The astute reader may have noticed that I'm calling some methods that appear to 
 
 #### Refactoring our existing code
 
-```ruby
+{% highlight ruby %}
 require 'forcefield/request'
 
 module Forcefield
@@ -323,17 +323,17 @@ module Forcefield
 
   end
 end
-```
+{% endhighlight %}
 
 In my opinion, this refactor is a much better separation of concern. Our <code>Forcefield::Middleware</code> class is now only responsible for one conditional to determine the validity of the request, delegating all the logic for handling incorrectly signed requests to our <code>@request</code> object.
 
-```ruby
+{% highlight ruby %}
 # ... previous test code ...
 context 'client makes request with sufficient, but incorrect OAuth header' do
   let(:test_uri) { "http://api.deathstar.com" }
   let(:incorrect_secret) { "!!badsecret!!" }
-  let(:bad_consumer_credentials) {{ :consumer_key => ImperialClient::DUMMY_KEY, :consumer_secret => incorrect_secret }}
-  let(:invalid_auth_header) {{ "HTTP_AUTHORIZATION" => SimpleOAuth::Header.new(:get, test_uri, {}, bad_consumer_credentials).to_s }}
+  let(:bad_consumer_credentials) { { :consumer_key => ImperialClient::DUMMY_KEY, :consumer_secret => incorrect_secret } }
+  let(:invalid_auth_header) { { "HTTP_AUTHORIZATION" => SimpleOAuth::Header.new(:get, test_uri, {}, bad_consumer_credentials).to_s } }
   let(:resp) { mock_request.get(test_uri, invalid_auth_header) }
   let(:client_with_good_credentials) { ImperialClient.new(ImperialClient::DUMMY_KEY, ImperialClient::DUMMY_SECRET) }
 
@@ -345,7 +345,7 @@ context 'client makes request with sufficient, but incorrect OAuth header' do
     resp.body.should == "Unauthorized. You are part of the Rebel Alliance and a Traitor!"
   end
 end
-```
+{% endhighlight %}
 
 We now have separated our request parsing code from our middleware's core logic. This leaves us with a lean, readable entry point for our middleware. Some additional tests, oauth specific edgecases and niceties can be found in the source on [Github](https://github.com/tonywok/forcefield)
 

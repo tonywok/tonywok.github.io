@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Tony
-title : Book Club - Land of Lisp Chapters 1-2
+title : Book Club - Land of Lisp Chapter 4
 date  : 2011-06-13
 ---
 
