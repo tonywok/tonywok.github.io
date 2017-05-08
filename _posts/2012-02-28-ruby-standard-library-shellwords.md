@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Tony
-title : Ruby Standard Library: Shellwords
+title : Ruby Standard Library - Shellwords
 date  : 2012-02-28
 ---
 
