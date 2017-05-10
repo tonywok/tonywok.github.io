@@ -2,11 +2,11 @@ title: tonywok
 email: tonywok@gmail.com
 description: >
   You've stumbled upon a collection of thoughts I thought important enough to write down at some point or another.
+  Not necessarily now, but then.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: tonywok
 github_username:  tonywok
-
 
 # Build settings
 markdown: kramdown
@@ -17,3 +17,9 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+minima:
+  date_format: "%b %-d, %Y"
+
+pagination:
+  enabled: true
