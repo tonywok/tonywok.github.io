@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : Around Aliasing
 date  : 2011-05-30
+published: false
 ---
 
 I’m making my way through Paolo Perrotta’s Metaprogramming Ruby book and I stumbled upon this nugget of Ruby meta-magic..

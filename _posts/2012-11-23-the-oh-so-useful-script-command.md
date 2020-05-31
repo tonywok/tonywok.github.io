@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : The oh-so useful script command
 date  : 2012-11-23
+published: false
 ---
 
 So I wanted to do a bit of textual analysis on the results of a redis query. Naturally I thought I could pass a couple commands to redis-cli and redirect the results to a file. Well, as it turns out, redis-cli only takes one command. I needed at least two commands in order to get the relevant results. So, how can I get that file?

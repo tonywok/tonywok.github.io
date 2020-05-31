@@ -4,6 +4,7 @@ author: Tony
 title : Starting out with GNU Screen
 tags: screen, omniboard, apprenticeship
 date  : 2010-10-12
+published: false
 ---
 
 I started up a new blog a few weeks ago, and I have to admit the timing was about as bad as it could be. I think I made my first post a day after the new quarter started at OSU. So, needless to say, I’ve fallen a bit behind. However, now that I’ve had some time to settle into my schedule, I want to get back to it.

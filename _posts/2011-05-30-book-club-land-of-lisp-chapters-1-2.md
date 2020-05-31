@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : Book Club - Land of Lisp Chapters 1-2
 date  : 2011-05-30
+published: false
 ---
 
 So my friend, and fellow developer, Jeff and I have decided to start a weekly book club. To kick things off, we wanted to start with something fun. With this in mind, we landed on Land of Lisp by Conrad Barski. The book claims to teach Lisp programming through a series of text based games. Sounds pretty cool to me…

@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : Book Club - Land of Lisp Chapter 3
 date  : 2011-06-06
+published: false
 ---
 
 Another week has gone by, and with that comes another Land of Lisp reading assignment. Since this chapter contained a bit more information than the first two, I’ve decided to split chapters 3 and 4 into two separate posts.

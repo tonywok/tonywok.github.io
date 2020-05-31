@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : Cbusjs - Romanify Kata
 date  : 2011-08-18
+published: false
 ---
 
 Last night I went to the Columbus Javascript user group. A co-worker of mine was presenting on converting a traditional Rails app into a single page backbone.js app with a Rails backend. I was excited to hear that he went through some of the same hurdles that I did while hacking on a project using backbone.js (future blog post?)

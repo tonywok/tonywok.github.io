@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+![Aruba, circa 2013](/images/me.jpg)
+{:style="float: left; width: 30%; margin: 0 10px 10px 0"}
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+Why hello there dear person of the internet.
+My name is Tony.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+You've somehow managed to stumble across my humble home on the web, <span title="aptly named, I might add">_webhaus_</span>.
+
+I'm a [music enthusiast](https://www.last.fm/user/tsnydermtg), table top gamer, and [software engineer](https://gist.github.com/tonywok/825dc01e87f3181122bc) currently living in London with my lovely partner, [Lara](https://en.wikipedia.org/wiki/Frog).
+
+For the past decade, prior to our hop across the pond, we called [Columbus, Ohio](https://en.wikipedia.org/wiki/Columbus,_Ohio) (specifically, [German Village](https://en.wikipedia.org/wiki/German_Village)) our home.

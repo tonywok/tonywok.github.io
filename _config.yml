@@ -1,25 +1,22 @@
-title: tonywok
+title: webhaus
 email: tonywok@gmail.com
+author: Tony Schneider
 description: >
-  You've stumbled upon a collection of thoughts I thought important enough to write down at some point or another.
+  Some things I decided to jot down.
   Not necessarily now, but then.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: tonywok
 github_username:  tonywok
+rss: RSS
 
 # Build settings
 markdown: kramdown
 theme: minima
-gems:
-  - jekyll-feed
-  - jekyll-paginate-v2
+plugins:
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
 
 minima:
   date_format: "%b %-d, %Y"
-
-pagination:
-  enabled: true
