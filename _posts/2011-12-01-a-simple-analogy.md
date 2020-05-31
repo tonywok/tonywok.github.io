@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : Book Club - Land of Lisp Chapters 1-2
 date  : 2011-05-30
+published: false
 ---
 
 Up until this point I’ve been posting almost entirely about programming. I have no doubt this will continue, but here’s an interesting little thought nugget I had recently that I’d like to share.

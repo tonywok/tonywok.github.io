@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : Nested Routing w/ a parameterized scope
 date  : 2012-11-09
+published: false
 ---
 
 The Rails router is awesome. But every once in a while I come across something I want to do and it’s not immediately obvious. In this particular case I wanted to have a simple nested resource with a scope.

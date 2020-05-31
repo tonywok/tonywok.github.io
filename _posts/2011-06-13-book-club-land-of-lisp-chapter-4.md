@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : Book Club - Land of Lisp Chapter 4
 date  : 2011-06-13
+published: false
 ---
 
 Heh, it seems I’ve been reading more than blogging as of late. Anyway, let’s get down to business. This chapter focuses on implementing conditional logic in lisp.

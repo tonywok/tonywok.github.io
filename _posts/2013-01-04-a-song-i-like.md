@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : A Song I Like
 date  : 2013-01-04
+published: false
 ---
 
 It starts with the realization of an impending worsening. Then the guitar comes in verifying something indeed has happened - and it’s not looking good, almost comically so. As if a third person were to come into focus and relieve the viewer of this tragic first hand experience. Fully aware that the narrator has an adept ability to shine a positive light on any situation, you consciously fall into his spell.

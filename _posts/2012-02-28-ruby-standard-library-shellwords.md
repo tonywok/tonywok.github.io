@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : Ruby Standard Library - Shellwords
 date  : 2012-02-28
+published: false
 ---
 
 It wasn’t too long ago I was working on a command line application. Luckily, ruby makes parsing the command line pretty trivial with the OptionParser. OptionParser works great if you want to specify command line arguments with flags. However, sometimes you want to accept options in a more declarative style.

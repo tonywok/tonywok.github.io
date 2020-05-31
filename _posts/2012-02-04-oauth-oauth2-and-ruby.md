@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : OAuth, OAuth2, and Ruby
 date  : 2012-02-04
+published: false
 ---
 
 Recently, some colleagues and I have been working on a client project that involves several different internal web services. Along with the usual user authentication, we needed a way to authenticate and verify API requests across these services.

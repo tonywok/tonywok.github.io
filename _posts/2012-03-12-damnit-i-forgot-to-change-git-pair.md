@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : Damnit! I forgot to change git-pair!
 date  : 2012-03-12
+published: false
 ---
 
 I use git-pair pretty heavily. It’s really nice for assigning blame to whoever checked in crappy code :P Seriously though, it’s nice to give credit where credit is due. However, one thing I am often guilty of is forgetting to change the git-pair. Most of the time I realize what I’ve done after a few commits.

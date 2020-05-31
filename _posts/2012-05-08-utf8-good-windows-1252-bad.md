@@ -3,6 +3,7 @@ layout: post
 author: Tony
 title : UTF-8 Good, Windows-1252 Bad
 date  : 2012-05-08
+published: false
 ---
 
 So I’m using [sidekiq](https://github.com/mperham/sidekiq), with [sidekiq-scheduler](https://github.com/moove-it/sidekiq-scheduler) at work in production to handle background tasks. Well, the other night around 10pm, just as I was settling down to watch the last episode of Mad Men, all hell broke lose.
