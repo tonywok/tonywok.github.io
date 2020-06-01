@@ -128,10 +128,9 @@ As a result, Rails now expects me to define **3** controllers:
 * `LightsabersController` located at `app/controllers/lightsabers_controller.rb`
 * **`Jedis::LightsabersControllers`** located at `app/controllers/jedis/lightsabers_controllers.rb`
 
-This allows both `LightsabersController` and `Jedis::LightsabersController` to define their own `show` action.
-In addition, we also get two _different_ url helpers: `lightsabers_path` and `jedis_lilghtsabers_path`.
+This allows both `LightsabersController` and `Jedis::LightsabersController` to define their own `show` action, which of course have their own url helpers: `lightsabers_path` and `jedis_lightsabers_path`, respectively.
 
-In addition, you now have an `app/controllers/jedis` directory and namespace to places all of the other resources that are from the perspective of an individual jedi.
+In addition, you now have an `app/controllers/jedis` directory and `Jedis` namespace to places all of the other resources that are from the perspective of a jedi.
 
 As you may have guessed, this organizational pattern extends to the view as well.
 This is great since the way you display a lightsaber by itself vs in the context of a specific jedi may vary greatly (this holds true when rendering JSON in an API scenario as well!)
