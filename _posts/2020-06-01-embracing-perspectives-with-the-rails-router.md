@@ -15,7 +15,7 @@ If you peek behind the curtain it has a number of interesting things going on.
 Some of these include:
 
 * Domain Specific Langage (DSL) for mapping routes to controller actions.
-* Builder pattern constructing ruby objects that from the DSL.
+* Builder pattern that constructs ruby objects from the DSL.
 * Registry for reflecting on said routes (e.g running `rails routes`)
 * Establishing a code organization convention that cuts across the entire framework.
 
