@@ -129,6 +129,7 @@ As a result, Rails now expects me to define **3** controllers:
 * **`Jedis::LightsabersControllers`** located at `app/controllers/jedis/lightsabers_controllers.rb`
 
 This allows both `LightsabersController` and `Jedis::LightsabersController` to define their own `show` action.
+In addition, we also get two _different_ url helpers: `lightsabers_path` and `jedis_lilghtsabers_path`.
 
 In addition, you now have an `app/controllers/jedis` directory and namespace to places all of the other resources that are from the perspective of an individual jedi.
 
