@@ -8,7 +8,7 @@ date  : 2020-06-01
 One of my favorite parts of Rails is the [router](https://guides.rubyonrails.org/routing.html).
 Like anything, it has some gotchas.
 
-For instance, the infamous guessing game of exactly what url helper gets generated that take a little while to get in your muscle memory...
+For instance, the infamous guessing game of what url helper to use for any given configuration of routes.
 But for the most part, once you wrap your head around it, it stays out of the way.
 
 If you peek behind the curtain it has a number of interesting things going on.
@@ -102,7 +102,7 @@ This is problematic because two routes now map to the same controller endpoint.
 Last one wins.
 **Confusion ensues.**
 
-What I've seen most people do at this point is break out of the CRUD methods and define a one-off action in the controller.
+What I've seen most people do at this point is break out of the CRUD methods and define a one-off action in the controller -- or worse yet, add a `if params[:jedi_id]` condition.
 
 With this decision, we begin to muddy the water of how our code is organized.
 
@@ -130,8 +130,7 @@ As a result, Rails now expects me to define **3** controllers:
 
 This allows both `LightsabersController` and `Jedis::LightsabersController` to define their own `show` action.
 
-In addition, you now have an `app/controllers/jedis` directory and na
-mespace to places all of the other resources that are from the perspective of an individual jedi.
+In addition, you now have an `app/controllers/jedis` directory and namespace to places all of the other resources that are from the perspective of an individual jedi.
 
 As you may have guessed, this organizational pattern extends to the view as well.
 This is great since the way you display a lightsaber by itself vs in the context of a specific jedi may vary greatly (this holds true when rendering JSON in an API scenario as well!)
