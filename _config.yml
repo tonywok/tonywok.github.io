@@ -15,6 +15,7 @@ theme: minima
 plugins:
   - jekyll-paginate
   - jekyll-feed
+  - jemoji
 exclude:
   - Gemfile
   - Gemfile.lock
