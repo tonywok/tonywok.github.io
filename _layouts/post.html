@@ -2,6 +2,19 @@
 layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  {% assign currentYear = site.time | date: '%Y' %}
+  {% assign postYear = page.date | date: '%Y' %}
+  {% assign postAge = currentYear | minus: postYear %}
+
+  {% if postAge >= 3 %}
+  <div class="warning">
+    <p>
+      :warning: This post was published more than {{ postAge }} years ago, and parts of its contents are very likely to be obsolete.
+      If you think the contents are worth updating, <a href="https://github.com/tonywok/tonywok.github.io/issues">open an issue</a>.
+      Otherwise, sit back and enjoy the stroll down memory lane.
+    </p>
+  </div>
+  {% endif %}
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
