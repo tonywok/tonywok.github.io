@@ -3,6 +3,7 @@ layout: post
 author: Tony Schneider
 title : Embracing Perspectives with the Rails Router
 date  : 2020-06-01
+tags  : software
 ---
 
 One of my favorite parts of Rails is the [router](https://guides.rubyonrails.org/routing.html).

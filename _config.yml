@@ -1,4 +1,4 @@
-title: webhaus
+title: ":globe_with_meridians: webhaus"
 email: tonywok@gmail.com
 author: Tony Schneider
 description: >
@@ -21,4 +21,4 @@ exclude:
   - Gemfile.lock
 
 minima:
-  date_format: "%b %-d, %Y"
+  date_format: "%Y-%m-%d"

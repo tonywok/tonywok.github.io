@@ -1,9 +1,9 @@
 ---
 layout: post
-author: Tony
+author: Tony Schneider
 title : Securing your API using Rack Middleware and OAuth 1.0
 date  : 2012-02-24
-published: false
+tags  : software
 ---
 
 One of the biggest challenges in web development is knowing when to break your monolithic application into services. If you segment too soon, you risk introducing unnecessary complexity. On the other hand, if you wait too long, your application is prone to becoming an unmaintainable ball of mud. I obviously can't give you a concrete answer to this problem. However, if you decide to break your application into services, there is one thing that remains constant; securing your services' endpoints. I've found Rack middleware to be an excellent tool for the job.

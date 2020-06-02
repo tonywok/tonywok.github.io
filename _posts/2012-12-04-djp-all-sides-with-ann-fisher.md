@@ -1,9 +1,9 @@
 ---
 layout: post
-author: Tony
+author: Tony Schneider
 title : Dick and Jane Project on All Sides w/ Ann Fisher
 date  : 2012-12-04
-published: false
+tag   : misc
 ---
 
 Today I was lucky enough to sit in w/ Ben Shinabery of the Dick and Jane Project on WOSU’s All Sides w/ Ann Fisher for Tech Tuesday!
