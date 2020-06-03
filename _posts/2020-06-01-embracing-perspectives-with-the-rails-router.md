@@ -91,7 +91,7 @@ This code expects the same controllers to be defined as before, but now we have 
 
 ```
 /jedis/:jedi_id/lightsabers/:id
-/jedis/lightsabers/:id
+/lightsabers/:id
 ```
 
 This is problematic because two routes now map to the same controller endpoint.
