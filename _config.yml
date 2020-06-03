@@ -1,9 +1,7 @@
-title: ":globe_with_meridians: webhaus"
+title: "webhaus"
+description: "Some sort of weblog cabin?"
 email: tonywok@gmail.com
 author: Tony Schneider
-description: >
-  Some things I decided to jot down.
-  Not necessarily now, but then.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  tonywok
