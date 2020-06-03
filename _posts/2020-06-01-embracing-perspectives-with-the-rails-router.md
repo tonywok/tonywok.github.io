@@ -7,10 +7,6 @@ tags  : software
 ---
 
 One of my favorite parts of Rails is the [router](https://guides.rubyonrails.org/routing.html).
-Like anything, it has some gotchas.
-
-For instance, the infamous guessing game of what url helper to use for any given configuration of routes.
-But for the most part, once you wrap your head around it, it stays out of the way.
 
 If you peek behind the curtain it has a number of interesting things going on.
 Some of these include:
@@ -20,8 +16,7 @@ Some of these include:
 * Registry for reflecting on said routes (e.g running `rails routes`)
 * Establishing a code organization convention that cuts across the entire framework.
 
-There's a ton to cover, and perhaps I will in future posts.
-But for this post, I want to focus on the last item.
+There's a ton to cover, and perhaps I will in future posts, but for this post, I want to focus on the last item.
 
 ## A Problem of Perspectives
 
@@ -78,7 +73,7 @@ One with the force and all that noise.
 ## It's a Trap!
 
 If you're anything like me, you'd agree that lightsabers are interesting in their own right.
-Perhaps we want to list all the lightsabers independently of the jedi that happen to wield them?
+Perhaps we want to list all the lightsabers independently of the jedi that happen to wield them.
 Maybe they've been wielded by multiple jedi over time (tell me more!).
 
 Goofy example aside, I've found wanting multiple perspectives of the same data to be a common pattern in large Rails apps.
