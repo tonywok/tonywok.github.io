@@ -9,7 +9,8 @@ layout: default
   {% if postAge >= 3 %}
   <div class="warning">
     <p>
-      :warning: This post was published more than {{ postAge }} years ago, and parts of its contents are very likely to be obsolete.
+      :warning: This post was published more than {{ postAge }} years ago.
+      It's likely the contents are obsolete or nostolgic.
       If you think the contents are worth updating, <a href="https://github.com/tonywok/tonywok.github.io/issues">open an issue</a>.
       Otherwise, sit back and enjoy the stroll down memory lane.
     </p>
@@ -23,9 +24,15 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
+      {%- if page.last_modified_at -%}
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="dateUpdated">
+          {{ page.last_modified_at | date: "(updated %Y-%m-%d)" }}
+        </time>
+      {%- endif -%}
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+      {%- endif -%}
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
