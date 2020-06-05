@@ -18,5 +18,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+collections:
+  compilations:
+    output: true
+
+header_pages:
+  - about.md
+
 minima:
   date_format: "%Y-%m-%d"

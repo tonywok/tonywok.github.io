@@ -44,4 +44,13 @@ layout: default
       {%- endfor -%}
     </ul>
   {%- endif -%}
+
+  <h2>:clipboard: Compilations</h2>
+  <ul>
+    {%- for compilation in site.compilations -%}
+    <li>
+      <a href="{{ compilation.url }}">{{ compilation.title }}</a>
+    </li>
+    {%- endfor -%}
+  </ul>
 </div>
