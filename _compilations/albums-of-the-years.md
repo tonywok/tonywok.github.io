@@ -7,10 +7,10 @@ title : Albums of the Years
 |---------------|
 | [2019](#2019) |
 | [2018](#2018) |
-| 2017          |
+| [2017](#2017) |
 | [2016](#2016) |
-| 2015          |
-| 2014          |
+| [2015](#2015) |
+| [2014](#2014) |
 | [2013](#2013) |
 | [2012](#2012) |
 | [2011](#2011) |
@@ -23,13 +23,12 @@ title : Albums of the Years
 
 * Andrew Bird - My Finest Work Yet
 * Angel Olson - All Mirrors
+* Rex Orange County - Pony
 * Deerhunter - Why Hasn't Everything Disappeared Already?
 * Thom Yorke - ANIMA
 * Toro y Moi - Outer Peace
-* Anderson .Paak - Ventura
 * Loyle Carner - Not Waving, But Drowning
 * Lizzo - Cause I Love You
-* Rex Orange County - Pony
 
 # 2018
 
@@ -39,6 +38,13 @@ title : Albums of the Years
 * Anderson .Paak - Oxnard
 * Beach House - 7
 
+# 2017
+
+* Kendrick Lamar - Damn
+* Clap Your Hands Say Yeah - The Tourist
+* The War on Drugs - A Deeper Understanding
+* LCD Soundsystem - American Dream
+ 
 # 2016
 
 1. Andrew Bird - Are You Serious
@@ -51,6 +57,27 @@ title : Albums of the Years
 1. Kendrick Lamar - Untitled Unmastered
 1. Beyonce - Lemonade
 1. Deakin - Sleep Cylces
+
+# 2015
+
+* Tame Impala - Currents
+* Kendrick Lamar - To Pimp a Butterfly
+* Kurt Vile - b'lieve i'm goin down
+* Courtney Barnett - Sometimes I Sit and Think, and Sometimes I Just Sit
+* Deerhunter - Fading Frontier
+
+# 2014
+
+1. Angel Olsen - Burn Your Fire for No Witness
+1. Mac Demarco - Salad Days
+1. Caribou - Our Love
+1. The War on Drugs - Lost in the Dream
+1. Parquet Courts - Sunbathing Animal
+1. St. Vincent - s/t
+1. Real Estate - Atlas
+1. Spoon - They Want My Soul
+1. Temples - Sun Temples
+1. Run the Jewels - Run the Jewels 2
 
 # 2013
 
@@ -66,6 +93,7 @@ title : Albums of the Years
 * Mazes - Ores & Minerals
 * Toro Y Moi - Anything in Return
 * Atoms For Peace - AMOK
+* Kanye West - Yeezus
 
 # 2012
 
