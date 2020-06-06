@@ -44,6 +44,7 @@ title : Albums of the Years
 * Clap Your Hands Say Yeah - The Tourist
 * The War on Drugs - A Deeper Understanding
 * LCD Soundsystem - American Dream
+* Flat Worms - s/t
  
 # 2016
 
@@ -75,24 +76,26 @@ title : Albums of the Years
 1. Parquet Courts - Sunbathing Animal
 1. St. Vincent - s/t
 1. Real Estate - Atlas
+1. The Rural Alberta Advantage - Mended With Gold
+1. Busman's Holiday - A Long Goodbye
 1. Spoon - They Want My Soul
+1. Tycho - Awake
 1. Temples - Sun Temples
 1. Run the Jewels - Run the Jewels 2
 
 # 2013
 
+* Devendra Banhart - Mala
 * Foxygen - We Are the 21st Century Ambassadors of Peach & Magic
 * Unknown Mortal Orchestra - II
-* David Bowie - The Next Day
 * Youth Lagoon - Wondrous Bughouse
 * Yo La Tengo - Fade
 * Wavves - Afraid of Heights
-* Woman - Rhye
 * FIDLAR - FIDLAR
 * A$AP Rocky - LongLiveA$AP
 * Mazes - Ores & Minerals
 * Toro Y Moi - Anything in Return
-* Atoms For Peace - AMOK
+* Thee Oh Sees - Floating Coffin
 * Kanye West - Yeezus
 
 # 2012
