@@ -120,16 +120,16 @@ We can now choose to define these variant lists as constants, methods, or even p
   module Tasks
     # ...stuff from before...
 
-    # option A
+    # option A: Accessible as a constant
     MANAGER_TASKS = ALL.select(&:manager?)
 
-    # option B
-    def manager_tasks(other_stuff)
+    # option B: An inquiry method you can pass external args to
+    def self.manager_tasks(other_stuff)
       ALL.select { other_stuff }
     end
   end
 
-  # option C (somewhere else in codebase)
+  # option C: Leaving it up to the calling code somewhere else in the codebase.
   Tasks::ALL.select { |config|  whatever_you_need }
 ```
 
