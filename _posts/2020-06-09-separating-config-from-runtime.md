@@ -7,10 +7,10 @@ tags  : software
 ---
 
 I’ve always been a list maker.
-I use them for games I want to play, status updates, movies I’ve watched — you name it, I have a list for it.
+I use them for games I want to play, status updates, important tasks — you name it, I have a list for it.
 In fact, this blog post is an entry in my blog post ideas list!
 
-You’d be forgiven to think that this excitement for lists would transcend into how I like to write software.
+While I clearly maintain lots of personal lists, I generally try to avoid making too many of them while programming.
 
 Before I make my case, I want to clarify what I mean by *Static Lists*.
 I’m not talking about any sort of “List” data structure or “static” keyword.
@@ -30,7 +30,9 @@ TASK_NAMES = [
 ]
 ```
 
-I’m sure you’ve seen code like this and I’m sure you’ve written it — I know I have.
+It's likely you’ve seen code like this and probably written it — I know I have.
+Perhaps it starts as an inclusion validation or a way to populate a select box.
+
 We have this concept called a task somewhere in our system.
 It looks like there’s different types and we need to know all the names.
 At face value, without being pedantic, I don’t think there’s anything inherently wrong here.
