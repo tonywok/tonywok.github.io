@@ -21,6 +21,11 @@ Full disclosure, I’ve made up the term for this post since I don’t yet know 
 I’ll start with an generic example involving some sort of workflow system involving tasks.
 You can hopefully adapt this to whatever domain you find yourself in.
 
+Let's imagine we have some sort of task representation in our database.
+Each task record has a name, a status and a role that represents the kind of user that can perform the task.
+
+Somewhere in our codebase we're likely to have a list that enumerates the various names (or kinds) of tasks that make up our workflows.
+
 ```ruby
 TASK_NAMES = [
   "enter_data",
@@ -33,8 +38,6 @@ TASK_NAMES = [
 It's likely you’ve seen code like this and probably written it — I know I have.
 Perhaps it starts as an inclusion validation or a way to populate a select box.
 
-We have this concept called a task somewhere in our system.
-It looks like there’s different types and we need to know all the names.
 At face value, without being pedantic, I don’t think there’s anything inherently wrong here.
 
 ## A Portable, Accessible List
@@ -92,18 +95,18 @@ An alternate way to approach this is to unify the lists and make a new concept.
 ```ruby
 module Tasks
   ALL = [
-    ENTER_DATA = TaskConfig.new(key: :enter_data, role: :sales_rep),
-    SUBMIT_FOR_REVIEW = TaskConfig.new(key: :submit_for_review, role: :sales_rep),
-    COMPLETE_FOR_REVIEW = TaskConfig.new(key: :complete_review, role: :manager),
-    SUBMIT = TaskConfig.new(key: :submit, role: :manager)
+    ENTER_DATA = TaskConfig.new(kind: :enter_data, role: :sales_rep),
+    SUBMIT_FOR_REVIEW = TaskConfig.new(kind: :submit_for_review, role: :sales_rep),
+    COMPLETE_FOR_REVIEW = TaskConfig.new(kind: :complete_review, role: :manager),
+    SUBMIT = TaskConfig.new(kind: :submit, role: :manager)
   ]
  end
 
   class TaskConfig
-    attr_reader :key, :role
+    attr_reader :kind, :role
 
-    def initialize(key:, role:)
-      @key = key
+    def initialize(kind:, role:)
+      @kind = kind
       @role = role
     end
     # NOTE: omitting manager?, sales_rep? inquiry methods for brevity
@@ -116,7 +119,8 @@ We now have a single list of entries that contain the metadata we need to create
 You’ll notice I changed the module name from `TaskNames` to `Tasks`.
 We’re not dealing with just names anymore because we’ve _enriched_ our domain!
 
-We can now choose to define these variant lists as constants, methods, or even put the calling code in the driver’s seat.
+We can now choose to expose these variant lists as constants, methods, or even put the calling code in the driver’s seat.
+The important distinction is they are all derived from the same list.
 
 ```ruby
   module Tasks
@@ -135,7 +139,11 @@ We can now choose to define these variant lists as constants, methods, or even p
   Tasks::ALL.select { |config|  whatever_you_need }
 ```
 
-As we gain more and more requirements, we have a home for the complexity of how our a tasks need to work.
+We went from many lists to a single unified list that we can reflect on.
+
+We now have a home to house the complexity of tasks as our system gains more requirements.
+If you're tempted to make another list, it's likely you're missing a piece of metada in your task configuration object.
+
 In addition, we can use this same pattern again if there’s interesting behavior within a task itself (e.g maybe a role is only _sometimes_ required for that task?)
 
 We may also want to consider taking a look at the registry pattern if we find ourselves needing to reflect on the kinds of tasks we support.
