@@ -3,6 +3,7 @@ layout: post
 author: Tony Schneider
 title : Simple Code
 date  : 2019-01-25
+tags  : software
 ---
 
 > I want to to write _simple_ code.
