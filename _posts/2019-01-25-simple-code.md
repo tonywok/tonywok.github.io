@@ -83,7 +83,7 @@ Instead, try to identify the axioms of your domain.
 If you get those right, the effort to support a new composition of those axioms is more likely.
 
 If it's an experiment, take the time to define success criteria.
-If experiements are common, can you optimize for them by isolating them with experiments with similar goals?
+If experiments are common, can you optimize for them by isolating them alongside experiments with similar goals?
 
 ### Involve Other People
 
