@@ -6,7 +6,7 @@ date  : 2019-01-25
 tags  : software
 ---
 
-> I want to to write _simple_ code.
+> I want to write _simple_ code.
 
 I've found this deceptively straight-forward phrase to have a very contextual meaning.
 
