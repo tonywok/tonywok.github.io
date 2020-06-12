@@ -13,18 +13,35 @@ I've found this deceptively straight-forward phrase to have a very contextual me
 In order to make meaningful progress, you have to _get_ things *done*.
 However, in order to increase the rate at which things _get_ done, you have to make *doing* easier.
 
+Perhaps it's not about writing simple code at all, but rather choosing the optimal level of abstraction.
+
 When writing software, this tends to surface as the decision between writing code for your exact use case versus introducing some abstraction to better accommodate whatever the future _might_ bring (or has already up and brought!).
 
-## What is Simple Code?
+Are you after a simple solution or a simple interface?
 
-The one thing we all seem agree on is we want our code to be "simple".
-However, why is it that we can never seem to agree on what that means?
+## What is Optimal?
 
-What happens when we remove our personal bias and instead try to look at the problem from opposing perspectives?
+In short, it depends :tm:
+
+If you write the simplest solution every time, you're likely to end up in a quagmire of sensible solutions that as a whole lack any semblance of a plan.
+On the other hand, if the code works and doesn't change frequently, you can get onto more valuable tasks.
+
+If you write a new abstraction every chance you get, you can quickly end up spending most of your time trying to force ideas together that don't belong.
+The right abstraction should feel like finding a puzzle piece -- it slots in effortlessly.
+
+Making the optimal decision is not a static choice.
+You have to continuously manage it as constraints move in and out of view.
+
+But what happens when folks disagree on what they consider optimal?
+I've found there are usually two personalities in play, often operating with incomplete information.
+
+In my opinion the best tool we have at our disposal is empathy.
+Try to remove your personal bias and look at the problem from opposing perspectives.
 
 ### The Pragmatic Lens
 
-To the pragmatist, simple code is code that doesn’t try to hide away any complexity. 
+To the pragmatist, optimal code is code that doesn’t try to hide away any complexity.
+They are after the simplest solution to the problem.
 
 In isolation, this style is said to be able to be read and written in a very straightforward, low-effort manner.
 Because it uses an agreed upon set of primitives, it’s often less intimidating to new team members since it requires less knowledge of existing abstraction.
@@ -36,16 +53,19 @@ The benefit rightfully touted by the seasoned pragmatist is the possibility of a
 In addition, the pragmatist keeps the option of withholding investment entirely, whilst still delivering initial value.
 
 The cost identified by the idealist is that without abstraction, the system will have a lack of boundaries, resulting in having to keep large parts of the system on your mind when making changes.
+In addition, if you continue to take tebt, you further incentive yourself to defer paying it off.
 
 ### The Idealistic Lens
 
-To the idealist, simple code is the remaining code that _must_ be written after having been distilled down by the abstraction put in place.
+To the idealist, optimal code is the remaining code that _must_ be written after having been distilled down by the abstraction put in place.
+They are after a simple interface to make the problem melt away.
 
-Ideally, the simple code becomes the _meaningful_ bits relevant to your domain.
+Ideally, the code you write starts to resemble relevant parts of your domain.
 The “how” is tucked away to a trusted layer beneath the simple code.
 As a result of this layering, we can now iterate on the abstraction as domain definitions change.
 
 Rather than “simply” bolting on new functionality, we’re forced to confront how the new functionality fits into our existing understanding of the domain.
+If done right, this can leave us with the tools to adapt as our domain is enriched.
 
 The idealist is motivated by optimism of future events.
 The abstraction we come up with will eventually yield returns far exceeding the initial investment.
@@ -78,11 +98,12 @@ If there's no matching concept in the system already, it's likely a good candida
 
 There's a mental tax when folks have to map a concept to an unfit implementation of that concept.
 If the wrong concept makes its way into the hive mind, it can fester into more unfit concepts that compound the mistake.
+They to erradicate mistakes early.
 
-Instead, try to identify the axioms of your domain.
+Try to identify the axioms of your domain.
 If you get those right, the effort to support a new composition of those axioms is more likely.
 
-If it's an experiment, take the time to define success criteria.
+If you do find yourself in a more experimental setting, take the time to define success criteria.
 If experiments are common, can you optimize for them by isolating them alongside experiments with similar goals?
 
 ### Involve Other People
@@ -99,9 +120,7 @@ Group ownership and autonomy can be the difference between someone declaring tha
 
 ## Clarifying Our Intent
 
-Let’s stop “writing simple code”.
+Our goal shouldn't be to just "write simple code", but to continously try to write code at the _optimal_ level of abstraction.
 
-Instead let’s be explicit in our decision to either write the code we need _right now_ or the code we've consciously decided accommodates our level of uncertainty.
-And when we do it, let's do it as a team.
-
-Good luck and be ready to get it wrong sometimes :)
+We can use urgency, uncertainty and other peoples' perspectives to help arrive at a reasonable decision.
+As you learn more, the landscape changes -- expect to get it wrong and continuously re-evaluate.
