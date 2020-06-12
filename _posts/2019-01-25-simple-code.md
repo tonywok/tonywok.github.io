@@ -53,7 +53,7 @@ The benefit rightfully touted by the seasoned pragmatist is the possibility of a
 In addition, the pragmatist keeps the option of withholding investment entirely, whilst still delivering initial value.
 
 The cost identified by the idealist is that without abstraction, the system will have a lack of boundaries, resulting in having to keep large parts of the system on your mind when making changes.
-In addition, if you continue to take tebt, you further incentive yourself to defer paying it off.
+In addition, if you continue to take debt, you further incentive yourself to defer paying it off.
 
 ### The Idealistic Lens
 
