@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Tony Schneider
-title : Separating Config from Runtime
+title : Consolidating Static Lists
 date  : 2020-06-09
 tags  : software
 ---
@@ -22,28 +22,28 @@ I’ll start with an generic example involving some sort of workflow system invo
 You can hopefully adapt this to whatever domain you find yourself in.
 
 Let's imagine we have some sort of task representation in our database.
-Each task record has a name, a status and a role that represents the kind of user that can perform the task.
+Each task record has a name, a status, and a role that represents the kind of user that can perform the task.
 
-Somewhere in our codebase we're likely to have a list that enumerates the various names (or kinds) of tasks that make up our workflows.
+At some point a Static List emerges.
+Dreaming up an example, let's say we have a list that enumerates the various names (or kinds) of tasks that make up our workflow tasks.
 
 ```ruby
-TASK_NAMES = [
-  "enter_data",
-  "submit_for_review",
-  "complete_review",
-  "submit"
-]
+class Task < ApplicationRecord
+  NAMES = [
+    "enter_data",
+    "submit_for_review",
+    "complete_review",
+    "submit"
+  ]
 ```
 
 It's likely you’ve seen code like this and probably written it — I know I have.
 Perhaps it starts as an inclusion validation or a way to populate a select box.
 
-At face value, without being pedantic, I don’t think there’s anything inherently wrong here.
-
 ## A Portable, Accessible List
 
 Our example above suffers from a couple problems.
-For one, defining the static list as a lone constant is not very portable.
+For one, defining the static list as a lone constant in an ActiveRecord is not the most portable.
 Secondly, we don’t have a way to reference individual task names.
 
 A minor ergonomic improvement could be something like this, which I’ve seen become more common in ruby apps over the years:
@@ -63,11 +63,9 @@ The module makes the list portable and the clever use of constants inside the ar
 Great!
 
 If your use case never gets more complex than this, I can definitely see a case for calling it a day and happily moving on.
+In this example, let's say we gain some requirements that require us to indicate certain tasks must be performed by certain roles.
 
-## A Portable, Accessible, Unified List
-
-At some point we gain some requirements that tempt you to make _another_ list of task names (and another, and another, and another...)
-One way to achieve this is to continue the pattern like so:
+You might be tempted to achieve this by continuing the pattern, making _another_ list of task names:
 
 ```ruby
 module TaskNames
@@ -87,10 +85,13 @@ module TaskNames
 end
 ```
 
-In this example, it’s becoming clear that we have some static configuration that goes along with our tasks.
-As written, when we introduce new _kinds_ of tasks, it can become challenging to know all of the lists that we need to update -- especially when the lists live all over the place.
+While there's nothing inherently wrong with this, you may begin to run into trouble as you remove, modify and add new kinds of tasks to the system.
+In other words, it can quickly become challenging to know all of the lists that need updated -- especially when the lists aren't centrally located.
+This problem worsens as tasks gain more and more meta data.
 
-An alternate way to approach this is to unify the lists and make a new concept.
+## A Portable, Accessible, Unified List
+
+An alternate way to approach this is to unify the lists and introduce a new concept.
 
 ```ruby
 module Tasks
@@ -114,10 +115,7 @@ module Tasks
 end
 ```
 
-We now have a single list of entries that contain the metadata we need to create new lists on the fly.
-
-You’ll notice I changed the module name from `TaskNames` to `Tasks`.
-We’re not dealing with just names anymore because we’ve _enriched_ our domain!
+We now have a single list of entries that contain metadata that is able to be queried on the fly!
 
 We can now choose to expose these variant lists as constants, methods, or even put the calling code in the driver’s seat.
 The important distinction is they are all derived from the same list.
@@ -139,8 +137,6 @@ The important distinction is they are all derived from the same list.
   Tasks::ALL.select { |config|  whatever_you_need }
 ```
 
-We went from many lists to a single unified list that we can reflect on.
-
 We now have a home to house the complexity of tasks as our system gains more requirements.
 If you're tempted to make another list, it's likely you're missing a piece of metada in your task configuration object.
 
@@ -150,11 +146,15 @@ We may also want to consider taking a look at the registry pattern if we find ou
 
 ### Config vs Runtime
 
-I would argue what we’ve actually done is separate our “config” from our “runtime”.
+I would argue what we’ve actually done is start down the path of separating our “config” from our “runtime”.
 
-The `Task` itself is managing the “runtime” state of whether or not the task has been completed or maybe the specific user that it’s assigned to.
+The `Task` itself is managing the “runtime” state of whether or not the task has been completed or the specific user that it’s assigned to.
 
-On the other hand, our `TaskConfig`, a higher order concept, owns how a particular kind of task is "configured" — almost like a template used for creating runtime instances of Tasks :)
+On the other hand, our `TaskConfig`, a higher order concept, owns how a particular kind of task is "configured" — almost like a template used for creating runtime instances of Tasks.
+
+In addition, our runtime tasks have the flexibility to either "reach back" into the task config for static properties -- or decide to override the config with its own runtime value.
+
+This distinction of "adding to the runtime" vs "adding to config" is useful terminology when discussing the implementation of existing and future requirements.
 
 ### A Step Further: Runtime Config
 
@@ -163,4 +163,4 @@ In highly dynamic situations, you may have reason to create our `TaskConfig`s on
 The approach outlined above puts us in a nice spot since we can leverage the `TaskConfig` interface.
 In other words, if we’re careful, we can write our code in such a way that users of `TaskConfig` don’t know whether they’re dealing with a statically configured `TaskConfig` or a `TaskConfig` that was instantiated from data in our database :sunglasses:
 
-So, next time you catch yourself making many static lists, take a beat to consider whether or not you’re actually hiding a concept.
+So, next time you catch yourself making many static lists, take a beat to consider if it's actually one list with lots of meta data.
