@@ -252,7 +252,7 @@ As defined, the nesting inside `PolicyService.create_policy` is:
 
 As a result, `PolicyService.create_policy` works as expected, first checking for `RatingService` in `SomeNamespace::PolicyService`, then `SomeNamespace` and finally at the top level via `::RatingService`.
 
-## Variant 2: `class << self` (singleton class scope)
+### Variant 2: `class << self` (singleton class scope)
 
 Subtly different, the nesting for `PolicyService.create_policy2` is:
 
