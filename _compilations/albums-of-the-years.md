@@ -5,6 +5,7 @@ title : Albums of the Years
 
 | Table of Contents |
 |---------------|
+| [2020](#2020) |
 | [2019](#2019) |
 | [2018](#2018) |
 | [2017](#2017) |
@@ -18,6 +19,12 @@ title : Albums of the Years
 | 2009          |
 | [2008](#2008) |
 | [2007](#2007) |
+
+# 2020
+
+* Tame Impala - The Slow Rush
+* The Strokes - The New Abnormal
+* Run the Jewels - RTJ4
 
 # 2019
 
