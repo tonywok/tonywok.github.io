@@ -24,6 +24,7 @@ title : Albums of the Years
 
 * Tame Impala - The Slow Rush
 * The Strokes - The New Abnormal
+* Dogleg - Melee
 * Run the Jewels - RTJ4
 
 # 2019
