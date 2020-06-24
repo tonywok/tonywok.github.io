@@ -43,6 +43,7 @@ While Michael's response is amazing, the question is legitimate and very similar
 * Can fostering a great community _be_ the business model?
 
 You can see the guys [answer my question](https://youtu.be/SSRfiu7j9KM?t=3194) in episode in [Episode 97](https://youtu.be/SSRfiu7j9KM).
+I was referencing the "Spirit of the Local Game Store" discussion in a [previous episode](https://youtu.be/3A8-KhqzJP4).
 
 Given how much I enjoy the podcast, I was flattered to have my question discussed.
 It's also a great example of the evolving ways in which content creators are engaging with their audiences.
