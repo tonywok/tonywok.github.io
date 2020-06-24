@@ -152,7 +152,7 @@ Worth noting that as written, if the user doesn’t make a selection, the comman
 
 ### The Task: How do I?
 
-Here's a couples rules I try to follow:
+Here's a few rules I try to follow:
 
 * Implement an instance method called `execute` (`call` is also a popular choice, but I don't use it because it makes me think of `block.call`)
 * You only get one `execute` method (if you need another, make another command)
