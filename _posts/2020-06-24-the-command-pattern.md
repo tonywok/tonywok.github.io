@@ -25,6 +25,7 @@ Forget about whatever language or framework you’re using and try to think abou
 
 Before we start, let’s take a moment to establish our domain.
 I’m going to choose the admin dashboard because it’s pretty broadly applicable and most software projects have at least some notion of an admin dashboard.
+
 However, **at a high-level**, I think you could apply almost everything below to pretty much any domain you want.
 
 So from here on out, our “program” is an admin dashboard.
