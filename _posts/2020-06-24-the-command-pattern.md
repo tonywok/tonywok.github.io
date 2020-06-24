@@ -4,16 +4,14 @@ author: Tony Schneider
 title : The Command Pattern
 date  : 2020-06-24
 tags  : software
-published: false
 ---
 
 If you google the word “command”, you’ll eventually find a definition that’s something to the effect of:
 
 > A command is a **directive** to a computer **program** to perform a specific **task**.
 
-In other words, a command is a way to encapsulate behavior.
-
-Ok, so now that we got all the super generic stuff out of the way, let’s try to get more specific than “program”, “directive” and “task”.
+This definition is super generic because the command pattern is very broadly applicable.
+Let's start by defining a "program", "directive" and "task" to paint a more concrete picture.
 
 ## The Program
 
@@ -29,7 +27,7 @@ Before we start, let’s take a moment to establish our domain.
 I’m going to choose the admin dashboard because it’s pretty broadly applicable and most software projects have at least some notion of an admin dashboard.
 However, **at a high-level**, I think you could apply almost everything below to pretty much any domain you want.
 
-So from here on out, our “program” is an “admin dashboard”.
+So from here on out, our “program” is an admin dashboard.
 
 In my experience an admin dashboard usually serves two main roles:
 
@@ -44,6 +42,7 @@ One example of a directive in our fictional admin dashboard might be the ability
 
 Naming is certainly hard, but I think we have this one under control for now.
 Let’s call our command `CancelSubscription`.
+My preference is to put place our commands in a namespace for collocation, making it `Commands::CancelSubscription`.
 
 Regardless of the naming scheme you choose, try to follow these rules:
 
@@ -53,7 +52,8 @@ Regardless of the naming scheme you choose, try to follow these rules:
 As domains get more mature, they often become more specialized.
 
 Eventually, your admin dashboard might have tens of commands related to subscriptions.
-If this is the case, maybe you go with something like `Subscriptions::Cancel` instead.
+If this is the case, maybe you go with something like `Commands::Subscriptions::Cancel` instead.
+
 Renaming or reorganizing shouldn't be a herculean effort.
 
 ## The Task
@@ -84,48 +84,53 @@ For instance, a couple of usual suspects:
 * The effective date must be between the subscription start date and the subscription end date
 * A cancellation reason must be supplied and be one of several defined reasons
 
-There are certainly other libraries out there to choose from for both Ruby and other languages.
-I think a lot of this comes down to personal preference and willingness to learn new APIs.
-As a heads up, Commands may go by different names such as Interactors, Mutations, Operations, and others I’m sure.
+There are plenty of command libraries out there to choose from for both Ruby and other languages.
+The choice comes down to personal preference and willingness to learn new APIs.
+As a heads up, Commands may go by different names such as Interactors, Mutations, Operations, ServiceObjects and others I’m sure.
 
 Whatever they do, they likely do something similar but vary in syntax/DSL and feature set (e.g type coercion, checking, etc).
+I've found the conversation around this terminology to be largely a distraction.
 
 When using Ruby I tend to gravitate towards `ActiveModel` (and friends) since it’s _good enough_, almost guaranteed to be present, and usually avoids any sort of holy war, letting us focus on stuff that matters (i.e canceling subscriptions!).
 
 ```ruby
-class CancelSubscription
-  include ActiveModel::Validations
+module Commands
+  class CancelSubscription
+    include ActiveModel::Validations
 
-  attr_reader :subscription,
-              :administrator,
-              :effective_date,
-              :reason
+    attr_reader :subscription
+    attr_reader :administrator
+    attr_reader :effective_date
+    attr_reader :reason
 
-  validates :subscription, presence: true
-  validates :administrator, presence: true
-  validates :effective_date, presence: true
-  validates :reason, presence: true, inclusion: { in: Subscription::CancellationReasons::ALL }
-  validate :authorized_administrator
+    validates :subscription, presence: true
+    validates :administrator, presence: true
+    validates :effective_date, presence: true
+    validates :reason, presence: true, inclusion: { in: Subscription::CancellationReasons::ALL }
+    validate :authorized_administrator
 
-  def initialize(subscription:, administrator:, effective_date: nil, reason: nil)
-    @subscription = subscription
-    @adminstrator = administrator
-    @effective_date = effective_date
-    @reason = reason
-  end
+    def initialize(subscription:, administrator:, effective_date: nil, reason: nil)
+      @subscription = subscription
+      @adminstrator = administrator
+      @effective_date = effective_date
+      @reason = reason
+    end
 
-  private
+    private
 
-  def administrator_authorized
-    unless can_cancel_subscription?(administrator, subscription)
-      errors.add(:administrator, "does not have permission to cancel subscriptions")
+    def administrator_authorized
+      unless can_cancel_subscription?(administrator, subscription)
+        errors.add(:administrator, "does not have permission to cancel subscriptions")
+      end
     end
   end
 end
 ```
 
-Including `ActiveModel::Validations` defines a `valid?` that returns `true` or `false`.
+Including `ActiveModel::Validations` defines an instance method called `valid?` that returns `true` or `false`.
 If `valid?` returns `false`, it populates the `errors` on the `CancelSubscription` instance.
+
+We only want to execute our command when it's valid.
 
 In the case of our admin dashboard, we’d probably want to use these errors to re-render an invalid form or construct a JSON payload.
 
@@ -146,12 +151,16 @@ Worth noting that as written, if the user doesn’t make a selection, the comman
 
 ### The Task: How do I?
 
+Here's a couples rules I try to follow:
+
+* Implement an instance method called `execute` (`call` is also a popular choice, but I don't use it because it makes me think of `block.call`)
+* The command doesn't expose instance methods that take arguments (this means you need to pass something smarter into the constructor)
+
 So, assuming we got past our validations, how does one cancel a subscription?
 
-The good part is that it **_really doesn’t matter_** so much. :rainbow:
-That’s the beauty of the command.
-
 ```ruby
+# In our command
+#
 def execute
   # Mark subscription as canceled as of some date
   # Maybe create a cancellation audit record documenting whodunnit/reason
@@ -160,20 +169,32 @@ def execute
 end
 ```
 
-Sure, ideally it’s expertly modeled code that checks all the boxes that you subscribe to.
-In reality, it’s probably less than ideal and that’s okay.
+Given this is a fictional example, I don't know.
+But the point is, it doesn't matter.
+You've built a home for it.
 
-Because we used the command pattern, folks that want to cancel a subscription don’t have to _care_ exactly how a subscription is canceled — they just need to source the dependencies needed to perform the cancellation.
+When we're in the command, we care deeply about the implementation details of how a subscription is canceled.
+We do whatever we have to do to achieve that goal.
+From the outside of the command, once we have a reliable implementation, we literally can stop caring (until we are forced to :sweat_smile:)
 
-## Summary
+In other words, we've **encapsulated** the behavior of canceling a subscription.
 
-### Fat Models or Fat Controllers?
+That’s the beauty of the command.
+They free us from implementation detail, freeing us to talk and think at a higher level.
 
-How about neither? :sweat_smile:
+Sure, ideally it’s expertly modeled code that checks all the boxes that you passionately subscribe to.
+In reality, it’s probably the way it _has to work_ in today's system and that's okay.
+Ideally with the command as your boundary and a reasonable test harness, you're in a good position to make improvements when the time comes.
+
+## Usage
 
 For example, let’s imagine we’re exposing the `CancelSubscription` command as a form in our admin dashboard.
 
-We might have a controller that looks something like this:
+Form objects are a nice use case for the command pattern because they fit the mold of our _task_ perfectly.
+
+If the form (command) is valid, we want to submit (execute) the form (command).
+
+Our controller might look something like this:
 
 ```ruby
 module AdminDashboard
@@ -218,7 +239,7 @@ This frees us up to create representations that aren't 1-1 with database models 
 
 We’re better positioned to handle new requirements because we can always make a new command variant or even compose commands with one another.
 
-Also, we’re able to write high-value tests without making a single request/response (you should still write end-to-end tests, just maybe fewer than you otherwise might).
+Also, we’re able to write high-value tests without making a single request/response (you should still write end-to-end tests, just maybe fewer than you otherwise might :sweat_smile:)
 
 ### Going a Step Further: Result Objects
 
@@ -259,6 +280,20 @@ Usually, when doing this it’s because I’m exposing something that might be u
 
 This usually means taking extra care to ensure that both the arguments into the command and the result’s payload are POROs.
 
+### Going a Step Further: Command Composition
+
+In a codebase that frequently reuses commands outside of forms, or performs the same action from many perspectives, you might consider composing commands.
+
+In this case maybe you have two forms that orchestrate the cancelation of a subscription.
+
+* Admin cancels subscription (e.g `Forms::Admin::CancelSubscription`)
+* Customer cancels subscription (e.g `Forms::Customer::CancelSubscription`)
+
+After some minor adjustment to hoist up any admin specific behavior, both of these form objects could call our underlying `Commands::CancelSubscription`) command.
+
 —-
 
-So, in summary, just give the computer program the directives it needs to perform some tasks and you’ll be fine.
+In summary, the command pattern is an extremely forgiving and broadly applicable method of encapsulating behavior.
+
+Identify your domain (program), define a directive (name) and implement a specific task (command).
+
