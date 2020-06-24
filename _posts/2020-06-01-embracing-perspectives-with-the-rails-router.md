@@ -8,7 +8,7 @@ tags  : software
 
 One of my favorite parts of Rails is the [router](https://guides.rubyonrails.org/routing.html).
 
-If you peek behind the curtain it has a number of interesting things going on.
+If you peek behind the curtain it has several interesting things going on.
 Some of these include:
 
 * Domain Specific Langage (DSL) for mapping routes to controller actions.
@@ -23,7 +23,7 @@ There's a ton to cover, and perhaps I will in future posts, but for this post, I
 In my opinion, it's very easy for Rails developers to fall into the thought process of:
 
 1. I have an ActiveRecord model named `Foo`
-1. I should make an `FoosController`
+1. I should make a `FoosController`
 1. All actions involving a `Foo` go into the `FoosController`
 
 Ignoring the first point's ActiveRecord assumption, since I think it deserves its own post...
@@ -44,7 +44,7 @@ resource :jedis
 Here I define a "jedis" resource.
 As a result, Rails expects me to define a controller called `JedisController` located in `app/controllers/jedis_controller.rb`.
 
-In addition, each controller action is now expected to have a "view" located in a directory that corresponds with the resource:
+Also, each controller action is now expected to have a "view" located in a directory that corresponds with the resource:
 
 ```
 /app
@@ -55,7 +55,7 @@ In addition, each controller action is now expected to have a "view" located in 
 
 ## Nested Resources
 
-Eventually your app gains a requirement where it will grow some sort of nesting.
+Eventually, your app gains a requirement where it will grow some sort of nesting.
 For instance, I imagine our jedis will need some lightsabers.
 
 ```ruby
@@ -73,7 +73,7 @@ One with the force and all that noise.
 ## It's a Trap!
 
 If you're anything like me, you'd agree that lightsabers are interesting in their own right.
-Perhaps we want to list all the lightsabers independently of the jedi that happen to wield them.
+Perhaps we want to list all the lightsabers independently of the jedi that happens to wield them.
 Maybe they've been wielded by multiple jedi over time (tell me more!).
 
 Goofy example aside, I've found wanting multiple perspectives of the same data to be a common pattern in large Rails apps.
@@ -95,7 +95,7 @@ This code expects the same controllers to be defined as before, but now we have 
 ```
 
 This is problematic because two routes now map to the same controller endpoint.
-Last one wins.
+The last one wins.
 **Confusion ensues.**
 
 What I've seen most people do at this point is break out of the CRUD methods and define a one-off action in the controller -- or worse yet, add a `if params[:jedi_id]` condition.
@@ -124,16 +124,16 @@ As a result, Rails now expects me to define **3** controllers:
 * `LightsabersController` located at `app/controllers/lightsabers_controller.rb`
 * **`Jedis::LightsabersControllers`** located at `app/controllers/jedis/lightsabers_controllers.rb`
 
-This allows both `LightsabersController` and `Jedis::LightsabersController` to define their own `show` action, which of course have their own url helpers: `lightsabers_path` and `jedis_lightsabers_path`, respectively.
+This allows both `LightsabersController` and `Jedis::LightsabersController` to define their own `show` action, which of course have their own URL helpers: `lightsabers_path` and `jedis_lightsabers_path`, respectively.
 
-In addition, you now have an `app/controllers/jedis` directory and `Jedis` namespace to places all of the other resources that are from the perspective of a jedi.
+Also, you now have an `app/controllers/jedis` directory and `Jedis` namespace to places all of the other resources that are from the perspective of a jedi.
 
 As you may have guessed, this organizational pattern extends to the view as well.
 This is great since the way you display a lightsaber by itself vs in the context of a specific jedi may vary greatly (this holds true when rendering JSON in an API scenario as well!)
 
-This may seem like a minor change at first, but in my experience it can have a significant impact on how code is organized and discovered.
+This may seem like a minor change at first, but in my experience, it can have a significant impact on how code is organized and discovered.
 
-Personally, I'd recommend taking this approach for _every_ nested resource.
+I'd recommend taking this approach for _every_ nested resource.
 Interestingly, after taking this approach, I find little reason to break out of the default CRUD actions -- just define a new controller!
 
 ## A Parting Note
@@ -141,7 +141,7 @@ Interestingly, after taking this approach, I find little reason to break out of 
 Over time, Rails has developed a specific interpretation of [REST](https://en.wikipedia.org/wiki/Representational_state_transfer).
 Like anything, depending on your use case, it may not always suit your needs.
 
-Personally, I've found the sweet spot to be server rendered applications (gasp!) and APIs with concrete use-cases.
+I've found the sweet spot to be server-rendered applications (gasp!) and APIs with concrete use-cases.
 
 However, regardless of how you use the rails router, don't fall into the trap of thinking your <span title="Read: Not limited to ActiveRecord">domain representations</span> must be 1-1 with a controller.
 
