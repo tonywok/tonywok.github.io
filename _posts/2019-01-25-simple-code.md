@@ -8,10 +8,10 @@ tags  : software
 
 > I want to write _simple_ code.
 
-I've found this deceptively straight-forward phrase to have a very contextual meaning.
+I've found this deceptively straight-forward phrase to have very contextual meaning.
 
-In order to make meaningful progress, you have to _get_ things *done*.
-However, in order to increase the rate at which things _get_ done, you have to make *doing* easier.
+To make meaningful progress, you have to _get_ things *done*.
+However, to increase the rate at which things _get_ done, you have to make *doing* easier.
 
 Perhaps it's not about writing simple code at all, but rather choosing the optimal level of abstraction.
 
@@ -35,7 +35,7 @@ You have to continuously manage it as constraints move in and out of view.
 But what happens when folks disagree on what they consider optimal?
 I've found there are usually two personalities in play, often operating with incomplete information.
 
-In my opinion the best tool we have at our disposal is empathy.
+In my opinion, the best tool we have at our disposal is empathy.
 Try to remove your personal bias and look at the problem from opposing perspectives.
 
 ### The Pragmatic Lens
@@ -44,16 +44,16 @@ To the pragmatist, optimal code is code that doesn’t try to hide away any comp
 They are after the simplest solution to the problem.
 
 In isolation, this style is said to be able to be read and written in a very straightforward, low-effort manner.
-Because it uses an agreed upon set of primitives, it’s often less intimidating to new team members since it requires less knowledge of existing abstraction.
+Because it uses an agreed-upon set of primitives, it’s often less intimidating to new team members since it requires less knowledge of existing abstraction.
 
-The pragmatist is motivated by an uncertainty of future events.
+The pragmatist is motivated by the uncertainty of future events.
 Abstraction based on conjecture will be unnecessary and/or insufficient, resulting in more complexity as the system grows.
 
 The benefit rightfully touted by the seasoned pragmatist is the possibility of arriving at the same (or better) abstraction through repetition.
-In addition, the pragmatist keeps the option of withholding investment entirely, whilst still delivering initial value.
+Also, the pragmatist keeps the option of withholding investment entirely, whilst still delivering initial value.
 
 The cost identified by the idealist is that without abstraction, the system will have a lack of boundaries, resulting in having to keep large parts of the system on your mind when making changes.
-In addition, if you continue to take debt, you further incentive yourself to defer paying it off.
+Besides, if you continue to take debt, you further incentivize yourself to defer paying it off.
 
 ### The Idealistic Lens
 
@@ -67,7 +67,7 @@ As a result of this layering, we can now iterate on the abstraction as domain de
 Rather than “simply” bolting on new functionality, we’re forced to confront how the new functionality fits into our existing understanding of the domain.
 If done right, this can leave us with the tools to adapt as our domain is enriched.
 
-The idealist is motivated by optimism of future events.
+The idealist is motivated by the optimism of future events.
 The abstraction we come up with will eventually yield returns far exceeding the initial investment.
 
 The cost identified by the pragmatist is the creation of the abstraction in the first place.
@@ -77,13 +77,13 @@ And while it may be obvious what it claims to do, there tends to be a fear assoc
 
 ### Understand the Urgency
 
-One way to increase your chances of making the wrong decision is by making the decision under pressure.
-If you need something yesterday, it's probably not the best time to introduce an abstraction.
+One way to increase your chances of making the wrong decision is by deciding under pressure.
+If you need something yesterday, it's probably not the best time to introduce abstraction.
 
 Add something that gets the job done to put your mind at ease so you can assess the situation without distraction.
 If you can, do it with as few dependencies as possible to make removing it easier.
 
-Make an effort to communicate this intentional decision and plan ahead to reassess.
+Make an effort to communicate this intentional decision and plan to reassess.
 
 ### Determine the Uncertainty
 
@@ -98,7 +98,7 @@ If there's no matching concept in the system already, it's likely a good candida
 
 There's a mental tax when folks have to map a concept to an unfit implementation of that concept.
 If the wrong concept makes its way into the hive mind, it can fester into more unfit concepts that compound the mistake.
-They to erradicate mistakes early.
+Try to eradicate mistakes early.
 
 Try to identify the axioms of your domain.
 If you get those right, the effort to support a new composition of those axioms is more likely.
@@ -108,7 +108,7 @@ If experiments are common, can you optimize for them by isolating them alongside
 
 ### Involve Other People
 
-One sure fire way to torpedo the success of a decision, regardless of merit, is to make it in a vaccuum.
+One sure-fire way to torpedo the success of a decision, regardless of merit, is to make it in a vacuum.
 
 Know your audience.
 You don't want to be the only one that understands how something works or why it works the way it does.
@@ -120,7 +120,7 @@ Group ownership and autonomy can be the difference between someone declaring tha
 
 ## Clarifying Our Intent
 
-Our goal shouldn't be to just "write simple code", but to continously try to write code at the _optimal_ level of abstraction.
+Our goal shouldn't be to just "write simple code", but to write code at the _optimal_ level of abstraction.
 
-We can use urgency, uncertainty and other peoples' perspectives to help arrive at a reasonable decision.
+We can use urgency, uncertainty, and other peoples' perspectives to help arrive at a reasonable decision.
 As you learn more, the landscape changes -- expect to get it wrong and continuously re-evaluate.
