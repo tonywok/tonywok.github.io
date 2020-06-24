@@ -4,6 +4,7 @@ author: Tony Schneider
 title : The Command Pattern
 date  : 2020-06-24
 tags  : software
+published: false
 ---
 
 If you google the word “command”, you’ll eventually find a definition that’s something to the effect of:
