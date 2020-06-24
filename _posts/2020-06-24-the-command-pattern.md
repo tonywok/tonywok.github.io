@@ -288,8 +288,8 @@ In a codebase that frequently reuses commands outside of forms, or performs the 
 
 In this case maybe you have two forms that orchestrate the cancelation of a subscription.
 
-* Admin cancels subscription (e.g `Forms::Admin::CancelSubscription`)
-* Customer cancels subscription (e.g `Forms::Customer::CancelSubscription`)
+* Admin cancels subscription (e.g `Forms::Admins::CancelSubscription`)
+* Customer cancels subscription (e.g `Forms::Customers::CancelSubscription`)
 
 After some minor adjustment to hoist up any admin specific behavior, both of these form objects could call our underlying `Commands::CancelSubscription` command.
 
