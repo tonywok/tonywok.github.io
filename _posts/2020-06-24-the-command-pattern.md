@@ -291,7 +291,7 @@ In this case maybe you have two forms that orchestrate the cancelation of a subs
 * Admin cancels subscription (e.g `Forms::Admin::CancelSubscription`)
 * Customer cancels subscription (e.g `Forms::Customer::CancelSubscription`)
 
-After some minor adjustment to hoist up any admin specific behavior, both of these form objects could call our underlying `Commands::CancelSubscription`) command.
+After some minor adjustment to hoist up any admin specific behavior, both of these form objects could call our underlying `Commands::CancelSubscription` command.
 
 —-
 
