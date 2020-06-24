@@ -26,14 +26,14 @@ Forget about whatever language or framework you’re using and try to think abou
 
 Before we start, let’s take a moment to establish our domain.
 I’m going to choose the admin dashboard because it’s pretty broadly applicable and most software projects have at least some notion of an admin dashboard.
-However, **at a high level**, I think you could apply almost everything below to pretty much any domain you want.
+However, **at a high-level**, I think you could apply almost everything below to pretty much any domain you want.
 
 So from here on out, our “program” is an “admin dashboard”.
 
 In my experience an admin dashboard usually serves two main roles:
 
 1. Exposing an insider look at data to aid in debugging and monitoring.
-1. Exposing actions that only certain people are able to perform under certain conditions
+1. Exposing actions that only certain people can perform under certain conditions
 
 Let’s focus on the second for now.
 
@@ -47,11 +47,11 @@ Let’s call our command `CancelSubscription`.
 Regardless of the naming scheme you choose, try to follow these rules:
 
 1. Name the command after the behavior it implements _(this usually involves a verb)_
-1. Do this in such a way that behaviors in the same domain live near one another _(this may evolve over time)_
+1. Do this in such a way that behaviors in the same domain live near one another _(expect this to evolve)_
 
 As domains get more mature, they often become more specialized.
 
-Eventually your admin dashboard might have tens of commands related to subscriptions.
+Eventually, your admin dashboard might have tens of commands related to subscriptions.
 If this is the case, maybe you go with something like `Subscriptions::Cancel` instead.
 Renaming or reorganizing shouldn't be a herculean effort.
 
@@ -61,23 +61,23 @@ Given the admin dashboard (program) and our desire to cancel subscriptions (dire
 
 In this case, our task is concerned with two questions:
 
-1. Are the conditions such that I am able to cancel the subscription?
-1. If able, how do I go about cancelling the subscription?
+1. Are the conditions such that I can cancel the subscription?
+1. If able, how do I go about canceling the subscription?
 
-I really like that the definition uses the words _specific_ task.
+I like that the definition uses the words _specific_ task.
 In other words, if it doesn’t have to do with either of these two questions, do it somewhere else :)
 
-If we do need a piece of data in order answer either of these questions, we can pass it into our command so long as our command doesn’t know or care where it came from.
+If we do need a piece of data to answer either of these questions, we can pass it into our command so long as our command doesn’t know or care where it came from.
 This will make your command more re-usable and easier to test.
 
-For instance, our `CancelSubscription` command likely needs a subscription, a date the cancellation is to go into effect, the reason it’s being cancelled, and maybe the administrator that is performing the cancellation.
+For instance, our `CancelSubscription` command likely needs a subscription, a date the cancellation is to go into effect, the reason it’s being canceled, and maybe the administrator that is performing the cancellation.
 
 ### The Task: Am I Able?
 
-Before we perform the task, we need to make sure we are able to perform the task.
+Before we perform the task, we need to make sure we can perform the task.
 This is where you implement your business rules.
 
-For instance, a couple usual suspects:
+For instance, a couple of usual suspects:
 
 * Only administrators with certain permissions can cancel subscriptions
 * The effective date must be between the subscription start date and the subscription end date
@@ -85,11 +85,11 @@ For instance, a couple usual suspects:
 
 There are certainly other libraries out there to choose from for both Ruby and other languages.
 I think a lot of this comes down to personal preference and willingness to learn new APIs.
-As a heads up, Commands may go by different names such as: Interactors, Mutations, Operations, and others I’m sure.
+As a heads up, Commands may go by different names such as Interactors, Mutations, Operations, and others I’m sure.
 
-Whatever they do, they likely do something similar, but vary in syntax/DSL and feature set (e.g type coercion, checking, etc).
+Whatever they do, they likely do something similar but vary in syntax/DSL and feature set (e.g type coercion, checking, etc).
 
-When using Ruby I tend to gravitate towards `ActiveModel` (and friends) since it’s _good enough_, almost guaranteed to be present, and usually avoids any sort of holy war, letting us focus on stuff that actually matters (i.e cancelling subscriptions!).
+When using Ruby I tend to gravitate towards `ActiveModel` (and friends) since it’s _good enough_, almost guaranteed to be present, and usually avoids any sort of holy war, letting us focus on stuff that matters (i.e canceling subscriptions!).
 
 ```ruby
 class CancelSubscription
@@ -152,17 +152,17 @@ That’s the beauty of the command.
 
 ```ruby
 def execute
-  # Mark subscription as cancelled as of some date
+  # Mark subscription as canceled as of some date
   # Maybe create a cancellation audit record documenting whodunnit/reason
   # Maybe send out cancellation email?
-  # Maybe publish event to external system?
+  # Maybe publish an event to an external system?
 end
 ```
 
 Sure, ideally it’s expertly modeled code that checks all the boxes that you subscribe to.
 In reality, it’s probably less than ideal and that’s okay.
 
-Because we used the command pattern, folks that want to cancel a subscription don’t have to _care_ exactly how a subscription is cancelled — they just need to source the dependencies needed to perform the cancellation.
+Because we used the command pattern, folks that want to cancel a subscription don’t have to _care_ exactly how a subscription is canceled — they just need to source the dependencies needed to perform the cancellation.
 
 ## Summary
 
@@ -217,13 +217,13 @@ This frees us up to create representations that aren't 1-1 with database models 
 
 We’re better positioned to handle new requirements because we can always make a new command variant or even compose commands with one another.
 
-In addition, we’re able to write high value tests without making a single request/response (you should still write end-to-end tests, just maybe fewer than you otherwise might).
+Also, we’re able to write high-value tests without making a single request/response (you should still write end-to-end tests, just maybe fewer than you otherwise might).
 
 ### Going a Step Further: Result Objects
 
 Depending on the size and discipline within your codebase, you may want to limit the surface area exposed by your commands.
 
-Rather than expecting folks to initialize the command and call execute on it, you might consider exposing a class level method that does this for you under the covers and returns a result object.
+Rather than expecting folks to initialize the command and call execute on it, you might consider exposing a class-level method that does this for you under the covers and returns a result object.
 
 While you can certainly do this in many ways, I usually make a simple object that exposes two methods: `success?` and `payload`.
 
@@ -254,7 +254,7 @@ def self.run(**kwargs)
 end
 ```
 
-Usually when doing this it’s because I’m exposing something that might be used by another team and I want to control their access to the internals.
+Usually, when doing this it’s because I’m exposing something that might be used by another team and I want to control their access to the internals.
 
 This usually means taking extra care to ensure that both the arguments into the command and the result’s payload are POROs.
 
