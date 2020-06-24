@@ -182,7 +182,7 @@ From the outside of the command, once we have a reliable implementation, we lite
 In other words, we've **encapsulated** the behavior of canceling a subscription.
 
 That’s the beauty of the command.
-They free us from implementation detail, freeing us to talk and think at a higher level.
+They free us from the implementation detail burden, allowing us to talk and think at a higher level.
 
 Sure, ideally it’s expertly modeled code that checks all the boxes that you passionately subscribe to.
 In reality, it’s probably the way it _has to work_ in today's system and that's okay.
