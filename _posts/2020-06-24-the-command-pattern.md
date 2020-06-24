@@ -249,7 +249,7 @@ def self.run(**kwargs)
     payload = command.execute
     Result.new(success: true, payload: payload)
   else
-    Result.new(success: true, payload: command.errors)
+    Result.new(success: false, payload: command.errors)
   end
 end
 ```
