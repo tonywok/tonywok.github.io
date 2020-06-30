@@ -6,7 +6,7 @@ date  : 2007-11-07
 tags  : misc
 ---
 
-> Not _exactly_ sure when this was done, but the album came out in 2007 and I remember listening to it a bunch in the dorm room.
+> Not _exactly_ sure when this was done, but the album came out in 2007 and I remember listening to it a bunch in the dorm room at OSU.
 > 
 > One day I sat down and doodled this whilst doing so.
 
