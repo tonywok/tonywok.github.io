@@ -101,7 +101,7 @@ If the wrong concept makes its way into the hive mind, it can fester into more u
 Try to eradicate mistakes early.
 
 Try to identify the axioms of your domain.
-If you get those right, the effort to support a new composition of those axioms is more likely.
+If you get those right, the effort to support a new composition of those axioms is less of a lift.
 
 If you do find yourself in a more experimental setting, take the time to define success criteria.
 If experiments are common, can you optimize for them by isolating them alongside experiments with similar goals?
