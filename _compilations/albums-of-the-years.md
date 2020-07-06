@@ -53,6 +53,7 @@ title : Albums of the Years
 * The War on Drugs - A Deeper Understanding
 * LCD Soundsystem - American Dream
 * Flat Worms - s/t
+* Wavves - King of the Beach
  
 # 2016
 
