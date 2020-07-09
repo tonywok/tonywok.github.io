@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Tony
-title : Book Club - Land of Lisp Chapters 1-2
+title : A Simple Analogy
 date  : 2011-05-30
 published: false
 ---
