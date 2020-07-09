@@ -2,7 +2,7 @@
 layout: post
 author: Tony Schneider
 title : A Peek Behind ActiveModel::Model
-date  : 2020-07-09
+date  : 2020-07-08
 tags  : software
 ---
 
