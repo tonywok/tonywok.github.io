@@ -15,6 +15,8 @@ Maybe you partially dedicate a team member on some sort of triage rotation...
 
 However, once you reach a certain scale, you may find yourself spending a disproportionate amount of time doing repetitive tasks.
 
+## A Framework for First Class Support
+
 Having done my fair share of production support, I've noticed a few things that are almost always a good idea:
 
 * Name the support action
@@ -27,7 +29,7 @@ Having done my fair share of production support, I've noticed a few things that 
 * Track how frequently the action is performed
 * Surface the performed action
 
-## Name the Support Action
+### Name the Support Action
 
 While seemingly obvious, arguably the most important step is to name the support action.
 For instance, this might be something like "cancel subscription".
@@ -37,7 +39,7 @@ Having this name gives your team and organization a common way to refer to the s
 At worst, this will enable folks to discover the action and ask for it to be performed.
 At best, they can perform it themselves.
 
-## Define who can perform the action
+### Define who can perform the action
 
 Once you get a decent size of support requests, you'll probably find that some requests require more expertise than others.
 
@@ -46,7 +48,7 @@ Take the time to explicitly define who is authorized to act.
 Pay attention to who is requesting these actions to be performed.
 Perhaps they should be trained to perform it themselves.
 
-## Express why the action needs to be performed
+### Express why the action needs to be performed
 
 It's not enough to just "fix the glitch" and move on.
 
@@ -57,7 +59,7 @@ Also, I like to have a freeform "notes" section to capture any relevant context.
 
 Make sure to include an "other" reason so you know when a new classification might be emerging.
 
-## Encode the circumstances in which the action can be done
+### Encode the circumstances in which the action can be done
 
 It's sometimes tempting to just jump right into writing the script that solves your problem.
 
@@ -65,7 +67,7 @@ Before doing so, try to establish the circumstances in which the action can be d
 
 For instance, if we find ourselves having to cancel subscriptions, we would want to make sure our code to perform the cancellation only runs when there's an eligible subscription to cancel!
 
-## Perform the action
+### Perform the action
 
 Well, duh!
 
@@ -74,13 +76,13 @@ We want a low barrier of entry to aid in democratizing support.
 
 The goal is to make it easier to write a support action than to open up a production console.
 
-## Record who performed the action
+### Record who performed the action
 
 Make your support actions audit-able by default!
 
 Now that your support action defines who can perform the action, record it!
 
-## Organize your actions
+### Organize your actions
 
 As your application grows, so will the variety of things you need to support.
 
@@ -89,7 +91,7 @@ Use whatever features you have available to help organize support actions.
 The goal is to make them easy to discover.
 Maybe this means you place similar support actions in a shared namespace? Perhaps you add the ability to tag support actions with labels?
 
-## Track how frequently the action is performed
+### Track how frequently the action is performed
 
 Since we've named our support action and we record it having been run, it should be easy to track a number of interesting data points.
 
@@ -104,13 +106,13 @@ Put your metrics on a dashboard and review them periodically with your team/orga
 
 Answers to these questions can inform the efficacy of existing features and what features ought to be built!
 
-## Surface the performed actions
+### Surface the performed actions
 
 Now that you're recording all of these manual support actions, put them in an activity feed!
 
 This helps to ensure audibility and can help foster communication when rotating folks in and out of triage.
 
-# Putting It Into Practice
+## Putting It Into Practice
 
 How you choose to implement the above depends on your application and organization.
 
