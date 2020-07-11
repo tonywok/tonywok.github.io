@@ -78,6 +78,7 @@ title : Albums of the Years
 * Kurt Vile - b'lieve i'm goin down
 * Courtney Barnett - Sometimes I Sit and Think, and Sometimes I Just Sit
 * Deerhunter - Fading Frontier
+* Stoop Kids - Already out of time
 * Borns - Dopamine
 
 # 2014
