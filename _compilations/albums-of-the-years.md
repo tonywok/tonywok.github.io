@@ -105,6 +105,7 @@ title : Albums of the Years
 * Foxygen - We Are the 21st Century Ambassadors of Peach & Magic
 * Unknown Mortal Orchestra - II
 * Youth Lagoon - Wondrous Bughouse
+* Arcade Fire - Reflektor
 * Yo La Tengo - Fade
 * Wavves - Afraid of Heights
 * FIDLAR - FIDLAR
