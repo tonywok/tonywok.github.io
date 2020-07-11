@@ -80,6 +80,7 @@ title : Albums of the Years
 * Deerhunter - Fading Frontier
 * Stoop Kids - Already out of time
 * Borns - Dopamine
+* Houndmouth - Little Neon Limelight
 
 # 2014
 
