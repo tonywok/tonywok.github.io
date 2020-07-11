@@ -114,6 +114,7 @@ title : Albums of the Years
 * Thee Oh Sees - Floating Coffin
 * Kanye West - Yeezus
 * Generationals - Heza
+* Diane Coffee - My friend fish
 
 # 2012
 
