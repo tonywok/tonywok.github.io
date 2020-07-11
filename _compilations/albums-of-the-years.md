@@ -49,6 +49,7 @@ title : Albums of the Years
 # 2017
 
 * Kendrick Lamar - Damn
+* Kevin Morby - City Music
 * Clap Your Hands Say Yeah - The Tourist
 * The War on Drugs - A Deeper Understanding
 * Alt-J - RELAXER
@@ -76,6 +77,7 @@ title : Albums of the Years
 * Kurt Vile - b'lieve i'm goin down
 * Courtney Barnett - Sometimes I Sit and Think, and Sometimes I Just Sit
 * Deerhunter - Fading Frontier
+* Borns - Dopamine
 
 # 2014
 
@@ -108,6 +110,7 @@ title : Albums of the Years
 * Toro Y Moi - Anything in Return
 * Thee Oh Sees - Floating Coffin
 * Kanye West - Yeezus
+* Generationals - Heza
 
 # 2012
 
