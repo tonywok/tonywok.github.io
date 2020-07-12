@@ -15,8 +15,8 @@ title : Albums of the Years
 | [2013](#2013) |
 | [2012](#2012) |
 | [2011](#2011) |
-| 2010          |
-| 2009          |
+| [2010](#2010) |
+| [2009](#2009) |
 | [2008](#2008) |
 | [2007](#2007) |
 
@@ -163,24 +163,51 @@ title : Albums of the Years
 19. The Antlers - Burst Apart
 20. Kendrick Lamar - Section.80
 
+# 2010
+
+Searching...
+
+# 2009
+
+1. Animal Collective - Merriweather Post Pavilion
+2. St. Vincent - Actor
+3. The Antlers - Hospice
+4. Grizzly Bear - Veckatimist
+5. White Rabbits - It’s Frightening
+6. Phoenix - Wolfgang Amadeus Phoenix
+7. Japandroids - Post Nothing
+8. The Xx - s/t
+9. Andrew Bird - Noble Beast
+10. Girls - Album
+11. Cymbals Eat Guitars - Why There Are Mountains
+12. Fuck Buttons - Tarot Sport
+13. The Black Keys - Blackroc
+14. Real Estate - s/t
+15. Mos Def - The Ecstatic
+16. Yeah Yeah Yeahs - It’s Blitz
+17. Atlas Sound - Logos
+18. The Mars Volta - Octahedron
+19. Fever Ray - s/t
+20. Franz Ferdinand - Tonight: Franz Ferdinand
+
 # 2008
 
+1. The Rural Alberta Advantage - Hometowns
 1. Born Ruffians - Red Yellow & Blue
+1. Fuck Buttons - Street Horrrsing
 1. Evangelicals - The Evening Descends
-1. TV on the Radio - Dear Science
+1. Santogold - s/t
 1. Ratatat - LP3
 1. Vampire Weekend - s/t
 1. Frightened Rabbit - The Midnight Organ Flight
+1. Titus Andronicus - The Airing of Grievances
 1. MGMT - Oracular Spectacular
 1. The Walkmen - You and Me
 1. British Sea Power - Do You Like Rock Music?
 1. The Roots - Rising Down
 1. Beck - Modern Guilt
-1. Eli "Paperboy" Reed and the True Loves - Roll With You
 1. Foals - Antidotes
 1. The Black Keys - Attack & Release
-1. Nine Inch Nails - The Slip
-1. Bon Iver - For Emma, Forever Ago
 1. The Mars Volta - The Bedlam In Goliath
 1. Deerhunter - Microcastles
 1. Cold War Kids - Loyalty to Loyalty
