@@ -206,6 +206,7 @@ title : Albums of the Years
 
 1. The Rural Alberta Advantage - Hometowns
 1. Born Ruffians - Red Yellow & Blue
+1. Delta Spirit - Ode to Sunshine
 1. Fuck Buttons - Street Horrrsing
 1. Evangelicals - The Evening Descends
 1. Santogold - s/t
@@ -216,7 +217,6 @@ title : Albums of the Years
 1. MGMT - Oracular Spectacular
 1. The Walkmen - You and Me
 1. British Sea Power - Do You Like Rock Music?
-1. The Roots - Rising Down
 1. Beck - Modern Guilt
 1. Foals - Antidotes
 1. The Black Keys - Attack & Release
