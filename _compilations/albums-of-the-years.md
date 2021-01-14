@@ -5,6 +5,7 @@ title : Albums of the Years
 
 | Table of Contents |
 |---------------|
+| [2021](#2021) |
 | [2020](#2020) |
 | [2019](#2019) |
 | [2018](#2018) |
@@ -20,12 +21,16 @@ title : Albums of the Years
 | [2008](#2008) |
 | [2007](#2007) |
 
+# 2021
+
 # 2020
 
 * Tame Impala - The Slow Rush
 * The Strokes - The New Abnormal
 * Dogleg - Melee
 * Run the Jewels - RTJ4
+* Taylor Swift - folklore
+
 
 # 2019
 
