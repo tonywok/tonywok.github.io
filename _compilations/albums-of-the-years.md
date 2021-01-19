@@ -30,7 +30,7 @@ title : Albums of the Years
 * Dogleg - Melee
 * Run the Jewels - RTJ4
 * Taylor Swift - folklore
-
+* Hamilton Leithauser - The Loves of Your Life
 
 # 2019
 
