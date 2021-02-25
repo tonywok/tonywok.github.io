@@ -31,6 +31,7 @@ title : Albums of the Years
 * Run the Jewels - RTJ4
 * Taylor Swift - folklore
 * Hamilton Leithauser - The Loves of Your Life
+* Boy Pablo - Wachito Rico
 
 # 2019
 
