@@ -31,7 +31,6 @@ title : Albums of the Years
 * Run the Jewels - RTJ4
 * Taylor Swift - folklore
 * Hamilton Leithauser - The Loves of Your Life
-* Boy Pablo - Wachito Rico
 
 # 2019
 
@@ -51,6 +50,7 @@ title : Albums of the Years
 * Kurt Vile - Bottle It Up
 * Anderson .Paak - Oxnard
 * Beach House - 7
+* Boy Pablo - Soy Pablo
 
 # 2017
 
