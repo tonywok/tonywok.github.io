@@ -62,6 +62,7 @@ title : Albums of the Years
 * LCD Soundsystem - American Dream
 * St. Vincent - MASSEDUCTION
 * Flat Worms - s/t
+* Crumb - Locket EP
  
 # 2016
 
