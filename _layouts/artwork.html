@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+{% assign page_content = content | strip %}
+{% assign has_images = false %}
+{% if page.images and page.images.size > 0 %}
+  {% assign has_images = true %}
+{% endif %}
+{% assign is_single_image = false %}
+{% if has_images and page.images.size == 1 %}
+  {% assign is_single_image = true %}
+{% endif %}
+{% assign page_alt = page.alt | default: page.title | default: "Magic card artwork" %}
+{% assign page_image_dir = page.url | replace: '/artwork/', '' | replace: '/', '' %}
+{% assign page_image_dir = '/images/artwork/' | append: page_image_dir | append: '/' %}
+
+<article class="artwork-page{% if is_single_image %} artwork-page--single{% endif %}">
+  <a class="artwork-page__back-link" href="{{ '/artwork/' | relative_url }}">Back to artwork</a>
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <p class="post-meta mono">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+    </p>
+  </header>
+
+  {% if page_content != "" %}
+    <div class="artwork-page__content">
+      {{ content }}
+    </div>
+  {% endif %}
+
+  {% if page_content != "" and has_images %}
+    <div class="artwork-page__divider" aria-hidden="true">
+      <span class="artwork-page__divider-mark"></span>
+    </div>
+  {% endif %}
+
+  {% if has_images %}
+    <ul class="artwork-page__gallery" role="list">
+      {% for image in page.images %}
+        {% assign image_src = image.src | default: image %}
+        {% unless image_src contains '://' %}
+          {% assign image_src_lead = image_src | slice: 0 %}
+          {% unless image_src_lead == '/' %}
+            {% assign image_src = page_image_dir | append: image_src %}
+          {% endunless %}
+        {% endunless %}
+        {% assign image_alt = image.alt | default: image.caption | default: page_alt %}
+        <li class="artwork-page__gallery-item">
+          <figure class="artwork-page__figure">
+            <a class="artwork-page__media" href="{{ image_src | relative_url }}">
+              <img
+                class="artwork-page__image"
+                src="{{ image_src | relative_url }}"
+                alt="{{ image_alt | escape }}"
+              >
+            </a>
+            {% if image.caption %}
+              <figcaption class="artwork-page__caption">{{ image.caption }}</figcaption>
+            {% endif %}
+          </figure>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>

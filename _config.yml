@@ -21,6 +21,9 @@ exclude:
 collections:
   compilations:
     output: true
+  artwork:
+    output: true
+    permalink: /artwork/:name/
 
 header_pages:
   - about.md
