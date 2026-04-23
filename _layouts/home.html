@@ -16,7 +16,7 @@ layout: default
         <h2>:art: Artwork</h2>
         <a class="home-section__more" href="{{ '/artwork/' | relative_url }}">See more</a>
       </div>
-      <ul class="card-gallery" role="list">
+      <ul class="card-gallery home-artwork-gallery" role="list">
         {%- for piece in recent_artwork limit: 3 -%}
           {% assign piece_alt = piece.alt | default: piece.title | default: "Magic card artwork" %}
           {% assign primary_image = nil %}

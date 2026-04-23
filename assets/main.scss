@@ -252,8 +252,22 @@ hr {
     flex-direction: column;
   }
 
-  .card-gallery {
-    grid-template-columns: 1fr;
+  .home-artwork-gallery {
+    display: grid;
+    grid-auto-columns: minmax(180px, 64vw);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+    scroll-snap-type: x proximity;
+  }
+
+  .home-artwork-gallery .card-gallery__item {
+    scroll-snap-align: start;
+  }
+
+  .home-artwork-gallery .card-gallery__caption {
+    display: none;
   }
 
   .artwork-page__gallery {
