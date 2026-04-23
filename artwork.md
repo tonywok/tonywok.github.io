@@ -7,7 +7,6 @@ permalink: /artwork/
 <div class="gallery-page">
   <div class="gallery-intro">
     <h1>{{ page.title }}</h1>
-    <p>A simple gallery of my Magic card artwork. Tap or click any piece to open its individual page.</p>
   </div>
 
   {% assign artwork_items = site.artwork | sort: "date" | reverse %}
