@@ -21,7 +21,7 @@ permalink: /artwork/
         {% if piece.images and piece.images.size > 0 %}
           {% assign cover_image = piece.images.first %}
           {% for image in piece.images %}
-            {% if image.cover %}
+            {% if image.cover or image.cover_image %}
               {% assign cover_image = image %}
               {% break %}
             {% endif %}
