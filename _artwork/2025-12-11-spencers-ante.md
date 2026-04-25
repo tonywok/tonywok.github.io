@@ -3,15 +3,11 @@ layout: artwork
 title: Spencer's Ante
 date: 2025-12-11
 images:
-  - src: 0.jpg
-    caption: 
-  - src: 1.jpg
-    caption: 
-  - src: 2.jpg
-    caption: 
+  - src: 0.jpeg
+  - src: 1.jpeg
+  - src: 2.jpeg
     cover_image: true
-  - src: 3.jpg
-    caption: 
+  - src: 3.jpeg
 ---
 
 My friend Spencer plays in a lot of old-school Magic events.
