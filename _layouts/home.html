@@ -68,25 +68,6 @@ layout: default
     </section>
   {%- endif -%}
 
-  {%- assign software_posts = site.tags.software | where_exp: "post", "post.hide_from_home != true" -%}
-  {%- if software_posts.size > 0 -%}
-    <h2>:computer: Software</h2>
-    <ul>
-      {%- for post in software_posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta mono">{{ post.date | date: date_format }}</span>
-        <a href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
-
   {%- assign misc_posts = site.tags.misc | where_exp: "post", "post.hide_from_home != true" -%}
   {%- if misc_posts.size > 0 -%}
     <h2>:raised_hands: Misc</h2>
@@ -114,4 +95,25 @@ layout: default
     </li>
     {%- endfor -%}
   </ul>
+
+  {%- assign software_posts = site.tags.software | where_exp: "post", "post.hide_from_home != true" -%}
+  {%- if software_posts.size > 0 -%}
+    <h2>:computer: Software</h2>
+    <ul>
+      {%- for post in software_posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta mono">{{ post.date | date: date_format }}</span>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+
 </div>
