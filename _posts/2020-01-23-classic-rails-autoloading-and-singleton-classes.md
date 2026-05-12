@@ -4,6 +4,7 @@ author: Tony Schneider
 title : Classic Rails Autoloading and Singleton Classes
 date  : 2020-01-23
 tags  : software
+published: false
 ---
 
 Rails constant autoloading is a really nifty feature.

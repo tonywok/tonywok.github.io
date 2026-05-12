@@ -18,28 +18,28 @@ layout: default
       </div>
       <ul class="card-gallery home-artwork-gallery" role="list">
         {%- for piece in recent_artwork limit: 3 -%}
-          {% assign piece_alt = piece.alt | default: piece.title | default: "Magic card artwork" %}
-          {% assign primary_image = nil %}
-          {% assign image_alt = piece_alt %}
-          {% assign piece_image_dir = piece.url | replace: '/artwork/', '' | replace: '/', '' %}
-          {% assign piece_image_dir = '/images/artwork/' | append: piece_image_dir | append: '/' %}
-          {% if piece.images and piece.images.size > 0 %}
-            {% assign cover_image = piece.images.first %}
-            {% for image in piece.images %}
-              {% if image.cover or image.cover_image %}
-                {% assign cover_image = image %}
-                {% break %}
-              {% endif %}
-            {% endfor %}
-            {% assign primary_image = cover_image.src | default: cover_image %}
-            {% unless primary_image contains '://' %}
-              {% assign primary_image_lead = primary_image | slice: 0 %}
-              {% unless primary_image_lead == '/' %}
-                {% assign primary_image = piece_image_dir | append: primary_image %}
-              {% endunless %}
-            {% endunless %}
-            {% assign image_alt = cover_image.alt | default: cover_image.caption | default: piece_alt %}
-          {% endif %}
+          {%- assign piece_alt = piece.alt | default: piece.title | default: "Magic card artwork" -%}
+          {%- assign primary_image = nil -%}
+          {%- assign image_alt = piece_alt -%}
+          {%- assign piece_image_dir = piece.url | replace: '/artwork/', '' | replace: '/', '' -%}
+          {%- assign piece_image_dir = '/images/artwork/' | append: piece_image_dir | append: '/' -%}
+          {%- if piece.images and piece.images.size > 0 -%}
+            {%- assign cover_image = piece.images.first -%}
+            {%- for image in piece.images -%}
+              {%- if image.cover or image.cover_image -%}
+                {%- assign cover_image = image -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+            {%- assign primary_image = cover_image.src | default: cover_image -%}
+            {%- unless primary_image contains '://' -%}
+              {%- assign primary_image_lead = primary_image | slice: 0 -%}
+              {%- unless primary_image_lead == '/' -%}
+                {%- assign primary_image = piece_image_dir | append: primary_image -%}
+              {%- endunless -%}
+            {%- endunless -%}
+            {%- assign image_alt = cover_image.alt | default: cover_image.caption | default: piece_alt -%}
+          {%- endif -%}
           <li class="card-gallery__item">
             <figure class="card-gallery__figure">
               {% if primary_image %}
@@ -68,28 +68,11 @@ layout: default
     </section>
   {%- endif -%}
 
-  {%- if site.tags.software.size > 0 -%}
-    <h2>:computer: Software</h2>
-    <ul>
-      {%- for post in site.tags.software -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta mono">{{ post.date | date: date_format }}</span>
-        <a href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
-
-  {%- if site.tags.misc.size > 0 -%}
+  {%- assign misc_posts = site.tags.misc | where_exp: "post", "post.hide_from_home != true" -%}
+  {%- if misc_posts.size > 0 -%}
     <h2>:raised_hands: Misc</h2>
     <ul>
-      {%- for post in site.tags.misc -%}
+      {%- for post in misc_posts -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta mono">{{ post.date | date: date_format }}</span>
@@ -112,4 +95,25 @@ layout: default
     </li>
     {%- endfor -%}
   </ul>
+
+  {%- assign software_posts = site.tags.software | where_exp: "post", "post.hide_from_home != true" -%}
+  {%- if software_posts.size > 0 -%}
+    <h2>:computer: Software</h2>
+    <ul>
+      {%- for post in software_posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta mono">{{ post.date | date: date_format }}</span>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+
 </div>
