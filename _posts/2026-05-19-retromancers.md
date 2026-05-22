@@ -53,7 +53,7 @@ The fledgling Discord server became an actual community. A logo was commissioned
 
 The group’s identity evolved into this incredible mashup of seasoned PTQ grinders and indie old-school players from the venerable Columbus Kobolds club.
 
-Before long, these weren’t just random people from the internet anymore. They were real friends — and they kept bringing their friends.
+Before long, these weren’t just random people from the internet anymore. They were real friends... and they kept bringing their friends.
 
 Eventually I couldn’t even attend every event myself. At one point there were four different Premodern events each month, all pulling together different groups of players under the Retromancers banner.
 
@@ -63,7 +63,7 @@ The Buckeye Brawl was born.
 
 It would be a 64-player tournament to crown the best Premodern player in the state. We’d charge enough per ticket to build a meaningful prize pool and donate the proceeds to the Mid-Ohio Food Collective.
 
-As we started promoting the event, we discovered similar scenes were popping up all over the Midwest — Michigan, Pennsylvania, Indiana, Kentucky. We reached out to those groups and even connected with Premodern YouTube creators to help spread the word.
+As we started promoting the event, we discovered similar scenes were popping up all over the Midwest: Michigan, Pennsylvania, Indiana, Kentucky. We reached out to those groups and even connected with Premodern YouTube creators to help spread the word.
 
 When tickets went live, the event sold out in under five hours. We thought we could get 64, but honestly expected a bit more of a grind. Then the waitlist hit thirty people.
 
