@@ -1,6 +1,6 @@
 ---
 layout: artwork
-title: Josh's 40th birthday alter!
+title: "Josh's 40th birthday Counterspell!"
 date: 2026-06-05
 images:
   - src: 0.jpg
